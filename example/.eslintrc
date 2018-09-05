@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "adidas-env/browser",
+    "adidas-env/node",
+    "adidas-es8",
+    "adidas-babel",
+    "adidas-vue"
+  ],
+  "rules": {
+    "no-magic-numbers": "off"
+  }
+}

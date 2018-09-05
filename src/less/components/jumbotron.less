@@ -1,0 +1,209 @@
+@import '~bootstrap/less/jumbotron';
+
+.jumbotron {
+  @timeline-step-circle: 1.5em;
+  @background-blur-filter: 3em;
+  @margin-small-horizontal: .5em;
+  @jumbotron-padding-top-bottom: @padding-base-horizontal * 2;
+  @jumbotron-padding-top-bottom-mobile: @jumbotron-padding-top-bottom / 4;
+  @jumbotron-horizontal-shadow: 0;
+  @jumbotron-vertical-shadow: .25em;
+  @jumbotron-vertical-margin: .5em;
+  @jumbotron-blur: .5em;
+  @jumbotron-spread: 0;
+  @jumbotron-opacity: 50;
+  @jumbotron-carousel-width: 90%;
+  @jumbotron-thumb-width: 4em;
+  @jumbotron-action-margin: 1.5em;
+
+  background-color: @primary-silver;
+
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top: @jumbotron-padding;
+    padding-bottom: @jumbotron-padding;
+  }
+
+  p {
+    font-size: @font-size-base;
+    margin-bottom: auto;
+    font-weight: inherit;
+  }
+
+  h1,
+  .h1 {
+    font-size: @font-size-h1;
+  }
+
+  &__container {
+    padding-top: @jumbotron-padding-top-bottom;
+    padding-bottom: @jumbotron-padding-top-bottom;
+    overflow: hidden;
+    .position(relative);
+
+    .container-fluid {
+      .container-fixed(@custom-gutter);
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+      padding-top: 0;
+      padding-bottom: @jumbotron-padding-top-bottom-mobile;
+    }
+  }
+
+  &__background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(@background-blur-filter);
+    .position(absolute, 0, 0, 0, 0);
+  }
+
+  &__menu {
+    margin-bottom: @jumbotron-padding-top-bottom;
+  }
+
+  &__image {
+    max-width: calc(100% ~'-' @jumbotron-thumb-width);
+    width: calc(100% ~'-' @jumbotron-thumb-width);
+  }
+
+  &__thumb {
+    border: 1px solid @primary-white;
+    .img-responsive();
+
+    &.active {
+      border: 1px solid @blue-100;
+    }
+  }
+
+  &__thumbs {
+    width: @jumbotron-thumb-width;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__carousel {
+    &__container {
+      .flex(row, center, center);
+    }
+
+    .item {
+      padding: @jumbotron-blur;
+
+      &__image {
+        margin: 0 auto;
+        box-shadow: @jumbotron-horizontal-shadow @jumbotron-vertical-shadow @jumbotron-blur @jumbotron-spread fade(@gray-base, @jumbotron-opacity);
+      }
+    }
+
+    .carousel-inner {
+      max-width: @jumbotron-carousel-width;
+      margin: 0 auto;
+    }
+
+    .carousel-control {
+      color: @primary-white;
+      background-image: none;
+      text-shadow: none;
+      opacity: 1;
+
+      &.left {
+        .flex(row, center, flex-start);
+      }
+
+      &.right {
+        .flex(row, center, flex-end);
+      }
+    }
+  }
+
+  &__timeline {
+    @margin-top: @navbar-padding-horizontal * 2;
+    @margin-right: floor((@grid-gutter-width / -2));
+    @margin-bottom: @navbar-padding-horizontal * 2;
+    @margin-left: ceil((@grid-gutter-width / -2));
+
+    margin: @margin-top @margin-right @margin-bottom @margin-left;
+    .flex(row, center, space-between);
+
+    .position(relative);
+
+    &:before {
+      content: '';
+      height: 1px;
+      background-color: black;
+      transform: translateY(-50%);
+      .position(absolute, 50%, floor(@timeline-step-circle /1.5em), null, floor(@timeline-step-circle /1.5em));
+    }
+  }
+
+  &__step {
+    z-index: @zindex-navbar;
+    border-radius: 50%;
+    border: 1px solid;
+    width: @timeline-step-circle;
+    height: @timeline-step-circle;
+    .flex(row, center, center);
+
+    &--disable {
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    &--enable {
+      border-color: @primary-black;
+      background-color: @primary-white;
+    }
+  }
+
+  &__title {
+    font-size: @font-size-h3;
+    color: @primary-nickel;
+    font-weight: bold;
+    margin-top: 0;
+    .font-family-heading-bold();
+  }
+
+  &__subhead {
+    color: @primary-nickel;
+    margin-bottom: @padding-base-horizontal * 1.5;
+    .flex(row, center, space-between);
+  }
+
+  &__subtitle {
+    font-size: @font-size-h5;
+    color: @primary-nickel;
+    margin: 0;
+    font-weight: @headings-font-weight;
+  }
+
+  &__overtitle {
+    height: 2em;
+    position: relative;
+
+    .overtitle-text {
+      font-size: @font-size-h6;
+    }
+  }
+
+  &__action {
+    font-size: @font-size-small;
+    font-weight: bold;
+    color: @gray-light;
+    margin-top: @jumbotron-vertical-margin;
+
+    &--reply {
+      margin-left: @jumbotron-action-margin;
+    }
+  }
+
+  &__rate {
+    .flex(row, center);
+
+    .rate__label {
+      font-size: @font-size-small;
+      color: @brand-primary;
+      margin-left: @margin-small-horizontal;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: @padding-small-vertical 0 @padding-base-vertical;
+}
+
+h1 {
+  font-size: @font-size-h1;
+  .font-family-heading-bold();
+}
+
+h2 {
+  font-size: @font-size-h2;
+  .font-family-heading-bold();
+}
+
+h3 {
+  font-size: @font-size-h3;
+  .font-family-base-bold();
+}
+
+h4 {
+  font-size: @font-size-h4;
+  .font-family-base-regular();
+}
+
+h5 {
+  font-size: @font-size-h5;
+  .font-family-base-light();
+}
+
+h6 {
+  font-size: @font-size-h6;
+  .font-family-base-light-italic();
+}
+
+p {
+  margin: @padding-small-vertical 0;
+}
+
+small,
+.small {
+  font-size: @font-size-small;
+}
+
+strong,
+.strong {
+  font-weight: bold;
+}
+
+.text-ellipsis {
+  .text-overflow();
+}
+
+.title {
+  @title-padding-margin: @padding-small-vertical;
+
+  padding: (@title-padding-margin / 2) (@title-padding-margin * 2);
+  margin: @title-padding-margin 0;
+  line-height: 1em + (@title-padding-margin * 2);
+  display: inline-block;
+
+  &-primary {
+    background-color: @btn-primary-bg;
+    color: @btn-primary-color;
+  }
+
+  &-secondary {
+    background-color: @primary-silver;
+    color: @blue-100;
+  }
+
+  &-tertiary {
+    background-color: transparent;
+    color: @primary-darkgray;
+  }
+}
+

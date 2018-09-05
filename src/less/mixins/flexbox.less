@@ -1,0 +1,41 @@
+// Flex box properties
+.flex(@direction: null, @align-items: null, @justify: null, @wrap: null, @align-content: null) {
+  .flex-display(flex);
+  .flex-property(direction, @direction);
+  .flex-property(align, @align-items);
+  .flex-property(justify, @justify);
+  .flex-property(wrap, @wrap);
+  .flex-property(content, @align-content);
+
+  .flex-property(@property, @value) {
+    ._getProp(direction) when not (@direction = null) {
+      flex-direction: @value;
+    }
+
+    ._getProp(align) when not (@align-items = null) {
+      align-items: @value;
+    }
+
+    ._getProp(justify) when not (@justify = null) {
+      justify-content: @value;
+    }
+
+    ._getProp(wrap) when not (@wrap = null) {
+      flex-wrap: @value;
+    }
+
+    ._getProp(content) when not (@align-content = null) {
+      align-content: @value;
+    }
+
+    ._getProp(@property);
+  }
+}
+
+.flex-display(@display) {
+  display: @display;
+}
+
+.flex-order(@num) {
+  order: @num;
+}

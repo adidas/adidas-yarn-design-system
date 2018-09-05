@@ -1,0 +1,149 @@
+.article {
+  @padding-margin: @padding-large-horizontal * 2;
+  @image-header-height-reply: 3em;
+
+  &__section {
+    border-bottom: 1px solid @primary-lightgray;
+    padding-top: @padding-margin;
+
+    .container-fluid {
+      .container-fixed(@custom-gutter);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active {
+      padding-top: @navbar-height * 3;
+    }
+  }
+
+  &__subhead {
+    color: @primary-darkgray;
+    .text-uppercase();
+  }
+
+  &__title {
+    color: @primary-nickel;
+    margin-top: @padding-large-horizontal;
+    margin-bottom: 0;
+    .font-family-heading-bold();
+  }
+
+  &__subtitle {
+    margin: 0;
+    .font-family-base-regular();
+    .text-capitalize();
+
+    &:after {
+      content: '';
+      width: @font-size-large;
+      border-bottom: 1px solid @primary-black;
+      height: 1px;
+      display: block;
+    }
+  }
+
+  &__headline {
+    .text-capitalize();
+
+    &:after {
+      content: '';
+      width: 1.5em;
+      height: 1px;
+      background-color: @primary-nickel;
+      display: block;
+      margin-top: .25em;
+    }
+  }
+
+  &__text,
+  &__media {
+    padding-bottom: 1em;
+  }
+
+  &__content {
+    margin-top: @padding-large-horizontal;
+    .clearfix();
+
+    > div {
+      padding-bottom: 1em;
+    }
+
+    &--comments {
+      border-bottom: 1px solid @primary-silver;
+
+      .article__content--comments {
+        padding-top: 1em;
+        margin-top: 0;
+
+        &__header {
+          .flex(row, center, flex-start);
+
+          &__image {
+            margin-right: 1em;
+
+            &--reply {
+              height: @image-header-height-reply;
+            }
+          }
+
+          &__text {
+            width: 100%;
+
+            .article__author {
+              margin-bottom: 0;
+            }
+          }
+
+          &__date {
+            padding-right: @padding-xs-horizontal;
+            .pull-right();
+          }
+        }
+
+        &--reply {
+          border-top: 1px solid @primary-silver;
+        }
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__attribute-label,
+  &__attribute {
+    .text-capitalize();
+  }
+
+  &__attribute-label {
+    font-weight: lighter;
+    color: @primary-darkgray;
+    .font-family-base-light();
+  }
+
+  &__attribute {
+    color: @primary-nickel;
+    font-size: 1em;
+    .font-family-base-light();
+  }
+
+  &__author {
+    .small();
+
+    &__link {
+      color: @blue-100;
+      .strong();
+    }
+  }
+
+  &__footer {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}

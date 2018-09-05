@@ -1,0 +1,98 @@
+{
+  "name": "@adidas/yarn-design-system",
+  "version": "1.0.0",
+  "description": "adidas Yarn Design System: toolkit for developing with HTML, CSS and JS with adidas design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adidas/adidas-yarn-design-system.git"
+  },
+  "license": "MIT",
+  "contributors": [
+    "David Recuenco <david.recuencogadea@gmail.com>",
+    "Jaime Pastor <moelders@gmail.com>"
+  ],
+  "homepage": "http://adidas.github.io/adidas-yarn-design-system/",
+  "dependencies": {
+    "nuxt": "1.4.2",
+    "showdown": "1.8.6",
+    "vue-i18n": "7.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "8.6.5",
+    "babel-core": "6.26.3",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.1.4",
+    "babel-plugin-istanbul": "4.1.6",
+    "babel-preset-env": "1.6.1",
+    "bootstrap": "3.3.7",
+    "cross-env": "5.1.1",
+    "css-loader": "0.28.11",
+    "del-cli": "0.2.1",
+    "eslint": "4.19.1",
+    "eslint-config-adidas-babel": "1.0.1",
+    "eslint-config-adidas-env": "1.0.1",
+    "eslint-config-adidas-es8": "1.0.1",
+    "eslint-config-adidas-vue": "1.0.1",
+    "eslint-plugin-import": "2.10.0",
+    "eslint-plugin-promise": "3.7.0",
+    "eslint-plugin-vue": "4.4.0",
+    "extract-loader": "2.0.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.11",
+    "less": "3.8.1",
+    "less-loader": "4.1.0",
+    "less2sass": "github:RecuencoJones/less2sass",
+    "postcss-loader": "2.1.6",
+    "raw-loader": "0.5.1",
+    "source-map-loader": "0.2.4",
+    "stylelint": "8.4.0",
+    "stylelint-config-adidas": "1.0.1",
+    "typeface-poppins": "0.0.54",
+    "typeface-roboto": "0.0.54",
+    "typeface-roboto-mono": "0.0.54",
+    "webpack": "3.8.1"
+  },
+  "scripts": {
+    "start": "npm run start:lib",
+    "start:lib": "npm run build:dev",
+    "start:example": "nuxt",
+    "clean": "npm run clean:dist && npm run clean:example && npm run clean:scss",
+    "clean:dist": "del dist",
+    "clean:example": "del docs && del .nuxt",
+    "clean:scss": "del src/scss",
+    "build": "npm run build:min && npm run build:scss",
+    "build:umd": "webpack",
+    "build:dev": "webpack -w",
+    "build:min": "cross-env NODE_ENV=production LIBRARY_NAME=yarn webpack -p",
+    "build:scss": "del src/scss && npm run build:scss:main && npm run build:scss:colors && npm run build:scss:typography && npm run build:scss:variables",
+    "build:scss:main": "less2sass src/less/variables/main.less -d src/scss/variables",
+    "build:scss:colors": "less2sass src/less/variables/colors.less -d src/scss/variables",
+    "build:scss:typography": "less2sass src/less/variables/typography.less -d src/scss/variables",
+    "build:scss:variables": "less2sass src/less/variables/variables.less -d src/scss/variables",
+    "build:example": "nuxt generate",
+    "build:example:spa": "cross-env NODE_ENV=production nuxt generate --spa",
+    "lint": "npm run lint:less && npm run lint:js && npm run lint:example",
+    "lint:less": "stylelint src/less/**/*.less",
+    "lint:js": "eslint *.js && eslint {src,scripts}/**/*.js",
+    "lint:example": "eslint --ext .js,.vue example",
+    "doc": "npm run build:example:spa",
+    "serve": "npm run build && nuxt build && nuxt start"
+  },
+  "keywords": [
+    "bootstrap",
+    "css",
+    "design",
+    "design-system",
+    "less"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

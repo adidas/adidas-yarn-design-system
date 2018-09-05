@@ -1,0 +1,280 @@
+@import '~bootstrap/less/navs';
+
+.nav {
+  .nav-tab {
+    position: relative;
+    display: block;
+
+    .nav-link {
+      position: relative;
+      display: block;
+      padding: @nav-link-padding;
+
+      &:focus {
+        text-decoration: none;
+        background-color: @nav-link-hover-bg;
+      }
+
+      &:hover {
+        @media @pointer-query {
+          text-decoration: none;
+          background-color: @nav-link-hover-bg;
+        }
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled {
+      .nav-link {
+        color: @nav-disabled-link-color;
+
+        &:focus {
+          color: @nav-disabled-link-hover-color;
+          text-decoration: none;
+          background-color: transparent;
+          cursor: @cursor-disabled;
+        }
+
+        &:hover {
+          @media @pointer-query {
+            color: @nav-disabled-link-hover-color;
+            text-decoration: none;
+            background-color: transparent;
+            cursor: @cursor-disabled;
+          }
+        }
+      }
+    }
+
+    .nav-img {
+      max-width: none;
+    }
+  }
+
+  // Open dropdowns
+  .open .open-link {
+    &,
+    &:focus {
+      background-color: @nav-link-hover-bg;
+      border-color: @link-color;
+    }
+
+    &:hover {
+      @media @pointer-query {
+        background-color: @nav-link-hover-bg;
+        border-color: @link-color;
+      }
+    }
+  }
+}
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  .nav-tab {
+    float: left;
+
+    .nav-link {
+      margin-right: 2px;
+      line-height: @line-height-base;
+      border: 1px solid transparent;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+
+      &:hover {
+        @media @pointer-query {
+          border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        }
+      }
+    }
+
+    &.active .nav-link {
+      &,
+      &:focus {
+        color: @nav-tabs-active-link-hover-color;
+        background-color: @nav-tabs-active-link-hover-bg;
+        border: 1px solid @nav-tabs-active-link-hover-border-color;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+
+      &:hover {
+        @media @pointer-query {
+          color: @nav-tabs-active-link-hover-color;
+          background-color: @nav-tabs-active-link-hover-bg;
+          border: 1px solid @nav-tabs-active-link-hover-border-color;
+          border-bottom-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+  border-bottom: 1px solid @primary-lightgray;
+  margin-bottom: @padding-large-vertical;
+
+  .nav-tab {
+    background-color: @primary-lightgray;
+    float: left;
+    border: 1px solid @primary-silver;
+    margin-bottom: -1px;
+
+    .nav-link {
+      color: @primary-nickel;
+
+      &--notification {
+        width: @tab-notification-size;
+        height: @tab-notification-size;
+        padding: 0;
+        .flex(column, center, center);
+      }
+    }
+
+    &:first-child {
+      border-right: none;
+    }
+
+    &:last-child {
+      border-left: none;
+    }
+
+    &.active,
+    &:focus {
+      border-bottom: 1px solid @blue-100;
+      background-color: @primary-white;
+
+      .nav-link {
+        color: @blue-100;
+      }
+    }
+
+    &:hover {
+      @media @pointer-query {
+        border-bottom: 1px solid @blue-100;
+        background-color: @primary-white;
+
+        .nav-link {
+          color: @blue-100;
+        }
+      }
+    }
+  }
+}
+
+// Stacked pills
+.nav-stacked {
+  .nav-tab {
+    margin-bottom: 0;
+    border: none;
+    background-color: @primary-white;
+
+    .nav-link {
+      padding: 0;
+      font-size: @font-size-h2;
+      color: @primary-nickel;
+      width: @tab-notification-size;
+      height: @tab-notification-size;
+      .flex(column, center, center);
+    }
+
+    &.active,
+    &:focus {
+      border-bottom: none;
+      background-color: @primary-lightgray;
+
+      .nav-link {
+        background-color: @primary-lightgray;
+        border-bottom: none;
+      }
+    }
+
+    &:hover {
+      @media @pointer-query {
+        border-bottom: none;
+        background-color: @primary-lightgray;
+
+        .nav-link {
+          background-color: @primary-lightgray;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+  .nav-tab {
+    float: none;
+
+    .nav-link {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+
+  .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .nav-tab {
+      display: table-cell;
+      width: 1%;
+
+      .nav-link {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+//
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+.nav-tabs-justified {
+  .nav-link {
+    margin-right: 0;
+    border-radius: @border-radius-base;
+  }
+
+  .active .nav-link,
+  .active .nav-link:focus {
+    border: 1px solid @nav-tabs-justified-link-border-color;
+  }
+
+  .active .nav-link:hover {
+    @media @pointer-query {
+      border: 1px solid @nav-tabs-justified-link-border-color;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .nav-link {
+      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+    }
+
+    .active .nav-link,
+    .active .nav-link:focus {
+      border-bottom-color: @nav-tabs-justified-active-link-border-color;
+    }
+
+    .active .nav-link:hover {
+      @media @pointer-query {
+        border-bottom-color: @nav-tabs-justified-active-link-border-color;
+      }
+    }
+  }
+}

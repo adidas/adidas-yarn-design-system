@@ -1,0 +1,32 @@
+// Position
+.position(@position: absolute, @top: null, @right: null, @bottom: null, @left: null) {
+  .property(position, @position);
+  .property(top, @top);
+  .property(right, @right);
+  .property(bottom, @bottom);
+  .property(left, @left);
+
+  .property(@property, @value) {
+    ._getProp(position) when not (@position = null) {
+      position: @value;
+    }
+
+    ._getProp(top) when not (@top = null) {
+      top: @value;
+    }
+
+    ._getProp(right) when not (@right = null) {
+      right: @value;
+    }
+
+    ._getProp(bottom) when not (@bottom = null) {
+      bottom: @value;
+    }
+
+    ._getProp(left) when not (@left = null) {
+      left: @value;
+    }
+
+    ._getProp(@property);
+  }
+}

@@ -1,0 +1,12 @@
+// Create a notification
+.notification(@color; @background) {
+  @notification-size: 1em;
+
+  background-color: @background;
+  color: @color;
+  text-align: center;
+  width: @notification-size;
+  padding: 0;
+  margin: 0;
+  .position(absolute, @notify-size / 3, @notify-size / 3, initial, initial);
+}

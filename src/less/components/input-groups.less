@@ -1,0 +1,24 @@
+@import '~bootstrap/less/input-groups';
+
+input::-ms-clear {
+  display: none;
+}
+
+.input-group {
+  &-addon {
+    border: none;
+    border-right: 1px solid @primary-silver;
+    font-size: @input-group-icon-size;
+    padding: 0 @input-group-addon-padding;
+
+    &:first-child {
+      border-right: inherit;
+    }
+  }
+
+  .form-control {
+    &:focus {
+      z-index: 2;
+    }
+  }
+}

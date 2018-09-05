@@ -1,0 +1,47 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  .link(@primary-darkgray, @blue-100, @primary-silver);
+
+  &.active {
+    cursor: @cursor-disabled;
+  }
+
+  &.disabled {
+    cursor: @cursor-disabled;
+
+    &:hover {
+      @media @pointer-query {
+        background-color: inherit;
+        border-color: inherit;
+        color: inherit;
+      }
+    }
+
+    &:focus {
+      background-color: inherit;
+      border-color: inherit;
+      color: inherit;
+    }
+  }
+
+  &.link--highlight {
+    .highlight(@primary-lightgray, @primary-gray, @primary-gray, @primary-lightgray);
+  }
+
+  &.link--light {
+    .link(@primary-darkgray, @blue-100, @primary-silver);
+
+    &.link--light--highlight {
+      .highlight(@primary-lightgray, @primary-gray, @primary-gray, @primary-lightgray);
+    }
+  }
+
+  &.link--dark {
+    .link(@primary-silver, @primary-white, @primary-darkgray);
+
+    &.link--dark--highlight {
+      .highlight(@primary-nickel, @primary-gray, @primary-darkgray, @primary-nickel);
+    }
+  }
+}

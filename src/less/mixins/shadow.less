@@ -1,0 +1,26 @@
+@lateral-correction-offset: @shadow-row-blur + 1px;
+@vertical-correction-offset: @shadow-row-vertical;
+@spread-correction: -1px;
+
+.shadow-table-data-first(@shadow-color-corrector) {
+  box-shadow:
+    @lateral-correction-offset @vertical-correction-offset 0 @spread-correction @shadow-color-corrector,
+    0 @shadow-row-vertical @shadow-row-blur 0 fade(@primary-black, @shadow-opacity);
+}
+
+.shadow-table-data(@shadow-color-corrector, @border-color-corrector: null) {
+  box-shadow:
+    @lateral-correction-offset @vertical-correction-offset 0 @spread-correction @shadow-color-corrector,
+    -@lateral-correction-offset @vertical-correction-offset 0 @spread-correction @shadow-color-corrector,
+    0 @shadow-row-vertical @shadow-row-blur 0 fade(@primary-black, @shadow-opacity);
+
+  & when not (@border-color-corrector = null) {
+    border-color: @border-color-corrector;
+  }
+}
+
+.shadow-table-data-last(@shadow-color-corrector) {
+  box-shadow:
+    -@lateral-correction-offset @vertical-correction-offset 0 @spread-correction @shadow-color-corrector,
+    0 @shadow-row-vertical @shadow-row-blur 0 fade(@primary-black, @shadow-opacity);
+}

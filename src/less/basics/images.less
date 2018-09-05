@@ -1,0 +1,23 @@
+.img {
+  &-responsive {
+    .img-responsive();
+  }
+
+  &-rounded {
+    border-radius: @border-radius-large;
+  }
+
+  &-thumbnail {
+    padding: @thumbnail-padding;
+    line-height: @line-height-base;
+    background-color: @thumbnail-bg;
+    border: 1px solid @thumbnail-border;
+    border-radius: @thumbnail-border-radius;
+    .transition(all .2s ease-in-out);
+    .img-responsive(inline-block);
+  }
+
+  &-circle {
+    border-radius: 50%;
+  }
+}

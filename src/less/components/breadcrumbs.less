@@ -1,0 +1,47 @@
+@import '~bootstrap/less/breadcrumbs';
+
+.breadcrumb {
+  @right-left: 0;
+  @bottom: 0;
+  @min-width: 5em;
+  @padding: @padding-small-vertical;
+
+  font-size: @font-size-small;
+  margin: 0;
+  padding: @padding;
+
+  .list-group,
+  .list-group--horizontal {
+    .list-group-item {
+      padding: 0;
+      .pull-left();
+
+      &--short {
+        .label {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          .transform(width, @min-width);
+
+          &:hover {
+            @media @pointer-query {
+              width: 100%;
+              text-overflow: unset;
+            }
+          }
+        }
+      }
+
+      &:after {
+        content: '\e90d';
+        font-family: @icon-font-name;
+        color: @primary-darkgray;
+        padding: 0 @breadcrumb-padding-horizontal;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '~bootstrap/less/button-groups';
+
+.btn-group {
+  .flex(row, center, space-between);
+
+  .btn {
+    flex: 1 1 auto;
+  }
+
+  &-vertical {
+    display: inline-block;
+
+    .btn {
+      .pull-left();
+    }
+  }
+}

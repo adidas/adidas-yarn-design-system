@@ -1,0 +1,19 @@
+.tabbar {
+  background-color: @primary-white;
+  border-bottom: 1px solid @primary-lightgray;
+  width: 100%;
+  height: @tabbar-height;
+  .font-family-base-regular();
+  .flex(row, center, center);
+  .hidden-xs();
+
+  &__search {
+    width: @tabbar-height;
+    height: @tabbar-height;
+    background-color: @blue-100;
+    font-size: @font-size-h5;
+    color: @primary-white;
+    .flex(row, center, center);
+    .position(absolute, 0, 0);
+  }
+}

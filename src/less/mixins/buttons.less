@@ -1,0 +1,63 @@
+// Basic button
+.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color) {
+  background-color: @background-color;
+  border: none;
+  color: @color;
+
+  &.disabled,
+  &:disabled {
+    @opacity: 60;
+    @disabled-background: fade(@background-color, @opacity);
+
+    background-color: @disabled-background;
+    border: none;
+    color: @disable-color;
+    opacity: 1;
+
+    &:hover {
+      @media @pointer-query {
+        background-color: @disabled-background;
+        border: none;
+        color: @disable-color;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:active,
+  &.active {
+    color: @active-color;
+  }
+
+  &:hover {
+    @media @pointer-query {
+      color: @active-color;
+    }
+  }
+}
+
+.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color;) when not (@background-color = transparent) {
+  &:active,
+  &.active {
+    box-shadow: @shadow-outset;
+  }
+
+  &:hover {
+    @media @pointer-query {
+      box-shadow: @shadow-outset;
+    }
+  }
+}
+
+.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color;) when (@background-color = transparent) {
+  &.disabled,
+  &:disabled {
+    background-color: @background-color;
+
+    &:hover {
+      @media @pointer-query {
+        background-color: @background-color;
+      }
+    }
+  }
+}

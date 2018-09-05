@@ -1,0 +1,53 @@
+@import '~bootstrap/less/grid';
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  .position(relative);
+}
+
+.container {
+  background-color: @primary-white;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+
+  &-fluid,
+  &-fluid--mobile {
+    max-width: @grid-max-width;
+    .container-fixed(@custom-gutter);
+  }
+
+  &-fluid--mobile {
+    @media screen and (max-width: @screen-xs-max) {
+      .container-fixed(@custom-gutter-mobile);
+    }
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    padding-top: @toolbar-height;
+  }
+
+  .section {
+    border-bottom: 1px solid @primary-lightgray;
+    padding: @padding-large-vertical;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .row {
+    margin: 0;
+
+    .section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Untracked general purpose files:
+.DS_Store
+.idea
+.npmrc
+.project
+.settings
+.vscode
+*.code-*
+*.log
+*.tmp
+*.orig
+*.sublime-*
+*.swp
+
+# Untracked general purpose directories:
+dist
+docs
+node_modules
+
+# Untracked application files and directories:
+.nuxt
+src/scss

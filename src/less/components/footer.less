@@ -1,0 +1,33 @@
+.footer {
+  background-color: @primary-white;
+  border-top: 1px solid @primary-lightgray;
+  padding: @padding-small-vertical;
+  height: @footer-height;
+  flex: 0 0 auto;
+
+  &--desktop {
+    .hidden-xs();
+  }
+
+  &--mobile {
+    .visible-xs();
+  }
+
+  &__container {
+    .flex(row, center, space-between);
+  }
+
+  &__left,
+  &__right {
+    flex: 0 0 auto;
+    .flex(row, center);
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
+
+  &__right {
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "YARN",
+    "subtitle": "Design System",
+    "brand": "adidas",
+    "brand-link": "adidas.com",
+    "brand-link-url": "https://adidas.com/",
+    "imprint-url": "https://www.adidas-group.com/en/service/imprint/",
+    "yarn": "@:meta.title @:meta.subtitle",
+    "yarn-contact": "opensourcesoftware@adidas.com"
+  },
+  "repository": {
+    "name": "@adidas/yarn-design-system",
+    "url": "https://github.com/adidas/adidas-yarn-design-system"
+  },
+  "common": {
+    "contact": "contact",
+    "imprint": "imprint",
+    "button": "button",
+    "color": "color",
+    "colors": {
+      "blue": "blue",
+      "bright-yellow": "bright-yellow",
+      "dark-blue": "dark-blue",
+      "gray": "gray",
+      "green": "green",
+      "light-blue": "light-blue",
+      "light-green": "light-green",
+      "orange": "orange",
+      "pink": "pink",
+      "primary": "primary",
+      "purple": "purple",
+      "red": "red",
+      "secondary": "secondary",
+      "tertiary": "tertiary",
+      "tertiary-dark": "tertiary (dark)",
+      "yellow": "yellow"
+    },
+    "position": {
+      "left": "left",
+      "right": "right",
+      "middle": "middle",
+      "top": "top",
+      "bottom": "bottom"
+    }
+  },
+  "views": {
+    "index": {
+      "name": "Home",
+      "title": "@:meta.title Examples",
+      "subtitle": "Examples of use of @:meta.brand @:meta.yarn",
+      "get-started": "Get started"
+    },
+    "overview": {
+      "name": "Get started"
+    },
+    "overview-designer": {
+      "name": "Designer",
+      "description": "@:meta.title for designers"
+    },
+    "overview-developer": {
+      "name": "Developer",
+      "description": "@:meta.title for developers"
+    },
+    "overview-manager": {
+      "name": "Project Manager",
+      "description": "@:meta.title for project managers"
+    },
+    "foundation": {
+      "name": "Foundation"
+    },
+    "foundation-colors": {
+      "name": "Colors",
+      "colors": "colors",
+      "primary-colors": "@:common.colors.primary @:views.foundation-colors.colors",
+      "secondary-colors": "secondary @:views.foundation-colors.colors",
+      "accent-colors": "accent @:views.foundation-colors.colors",
+      "notification-colors": "notification @:views.foundation-colors.colors",
+      "green-colors": "@:common.colors.green @:views.foundation-colors.colors",
+      "light-green-colors": "@:common.colors.light-green @:views.foundation-colors.colors",
+      "light-blue-colors": "@:common.colors.light-blue @:views.foundation-colors.colors",
+      "dark-blue-colors": "@:common.colors.dark-blue @:views.foundation-colors.colors",
+      "orange-colors": "@:common.colors.orange @:views.foundation-colors.colors",
+      "red-colors": "@:common.colors.red @:views.foundation-colors.colors",
+      "purple-colors": "@:common.colors.purple @:views.foundation-colors.colors",
+      "pink-colors": "@:common.colors.pink @:views.foundation-colors.colors",
+      "yellow-colors": "@:common.colors.yellow @:views.foundation-colors.colors",
+      "bright-yellow-colors": "@:common.colors.bright-yellow @:views.foundation-colors.colors"
+    },
+    "foundation-typography": {
+      "name": "Typography",
+      "heading": "heading",
+      "paragraph": "paragraph",
+      "paragraph-small": "paragraph (small)",
+      "monospace": "monospace",
+      "section": {
+        "yarn-heading": {
+          "title": "@:meta.title heading font family",
+          "description": "It is used for headlines and quotes only. It should always be displayed uppercase. Headlines are orientated to give hierarchy to a section in the context of a page.",
+          "recommendation": "The recommendation is to redefine this font family with Poppins ExtraLight and Poppins Black.",
+          "types": {
+            "black": "black",
+            "light": "light"
+          }
+        },
+        "yarn-base": {
+          "title": "@:meta.title base font family",
+          "description": "It is the main font used in @:meta.brand apps.",
+          "recommendation": "The recommendation is to redefine this font family with Roboto Thin, Regular and Bold.",
+          "types": {
+            "bold": "bold",
+            "regular": "regular",
+            "light": "light",
+            "light-italic": "light (italic)"
+          }
+        },
+        "text": {
+          "title": "Headings and text",
+          "description": "The two most important headings are based on the 'yarn-heading' font family, whereas the other ones and the paragraphs are base on 'yarn-base' family."
+        },
+        "font-size": {
+          "title": "Font sizes",
+          "description": "The font sizes are defined using 'rem' units to make @:meta.title scalable using the document font size as base.",
+          "base-size": "(base 16px)"
+        }
+      },
+      "example-text": "abcdefghijklmnopqrstuvwxyz"
+    },
+    "foundation-icons": {
+      "name": "@:meta.title icons"
+    },
+    "components": {
+      "name": "Components"
+    },
+    "components-buttons": {
+      "name": "Buttons",
+      "main-buttons": "Main buttons",
+      "colored-buttons": "Colored buttons",
+      "count-button-example": "Example with {count} button | Example with {count} buttons",
+      "action": "Action",
+      "state": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "sections": {
+        "icons": {
+          "name": "Button with icons",
+          "primary": "@:common.colors.primary",
+          "primary-text-icon": "@:common.colors.primary text/icon",
+          "link": "link appearance",
+          "secondary": "@:common.colors.secondary"
+        },
+        "group": {
+          "horizontal": {
+            "name": "Button group horizontal"
+          },
+          "vertical": {
+            "name": "Button group vertical"
+          }
+        },
+        "mobile": "Mobile buttons"
+      }
+    }
+  }
+}

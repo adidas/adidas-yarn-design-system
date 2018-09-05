@@ -1,0 +1,42 @@
+.link(@color, @active-color, @disabled-color) {
+  color: @color;
+
+  &.active {
+    color: @active-color;
+  }
+
+  &:hover {
+    @media @pointer-query {
+      color: @active-color;
+    }
+  }
+
+  &.disabled {
+    color: @disabled-color;
+  }
+}
+
+.highlight(@background-color, @active-background-color, @disabled-color, @disabled-background-color) {
+  background-color: @background-color;
+
+  &.active {
+    background-color: @active-background-color;
+  }
+
+  &:hover {
+    @media @pointer-query {
+      background-color: @active-background-color;
+    }
+  }
+
+  &.disabled {
+    background-color: @disabled-background-color;
+    color: @disabled-color;
+
+    &:hover {
+      @media @pointer-query {
+        color: @disabled-color;
+      }
+    }
+  }
+}

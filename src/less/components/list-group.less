@@ -1,0 +1,172 @@
+@import '~bootstrap/less/list-group';
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+.list-group {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--horizontal {
+    .flex(row, center);
+
+    .list-group-item {
+      padding: 0 @padding-large-horizontal;
+      .flex(row, center);
+    }
+  }
+
+  &--vertical {
+    .flex(column);
+
+    .list-group-item {
+      padding: @padding-small-vertical 0;
+    }
+  }
+
+  // Individual list items
+  //
+  // Use on `li`s or `div`s within the `.list-group` parent.
+
+  &-item {
+    border: @list-group-border;
+    margin: 0;
+    padding: @padding-small-vertical 0;
+
+    &-heading {
+      margin-bottom: .25em;
+    }
+
+    &.disabled {
+      color: @list-group-disabled-color-light;
+      cursor: @cursor-disabled;
+    }
+
+    &.disabled:hover {
+      @media @pointer-query {
+        background-color: inherit;
+        border-color: inherit;
+        color: inherit;
+
+        .list-group-item-heading {
+          color: inherit;
+        }
+
+        .list-group-item-text {
+          color: @list-group-disabled-color;
+        }
+      }
+    }
+
+    &.active:hover {
+      @media @pointer-query {
+        border-color: inherit;
+        color: inherit;
+        z-index: 2;
+      }
+    }
+
+    .yarn-icon + .label {
+      padding: 0 0 0 floor(@padding-base-horizontal / 2);
+      border-radius: 0;
+    }
+
+    .list-group {
+      font-size: 1em;
+      padding: @padding-small-vertical 0 0 @padding-large-horizontal;
+    }
+
+    &.active {
+      color: @blue-100;
+    }
+
+    &--dark {
+      color: @primary-gray;
+
+      &.active {
+        color: @primary-white;
+      }
+
+      &:hover {
+        @media @pointer-query {
+          color: @primary-white;
+        }
+      }
+
+      &.disabled {
+        color: @list-group-disabled-color-dark;
+        cursor: @cursor-disabled;
+      }
+
+      &.disabled:hover {
+        @media @pointer-query {
+          color: @list-group-disabled-color-dark;
+          cursor: @cursor-disabled;
+        }
+      }
+    }
+
+    &--light {
+      color: @primary-darkgray;
+
+      &.active {
+        color: @blue-100;
+      }
+
+      &:hover {
+        @media @pointer-query {
+          color: @blue-100;
+        }
+      }
+
+      &.disabled {
+        color: @list-group-disabled-color-light;
+        cursor: @cursor-disabled;
+      }
+
+      &.disabled:hover {
+        @media @pointer-query {
+          color: @list-group-disabled-color-light;
+          cursor: @cursor-disabled;
+        }
+      }
+    }
+
+    &--highlight {
+      padding: @padding-base-vertical @padding-base-horizontal;
+      .flex(row, center, space-between);
+
+      &:hover {
+        @media @pointer-query {
+          background-color: @primary-lightgray;
+          color: @primary-nickel;
+        }
+      }
+
+      &.active {
+        background-color: @primary-lightgray;
+        color: @primary-nickel;
+
+        &:hover,
+        &:focus {
+          background-color: @primary-lightgray;
+        }
+      }
+
+      &.disabled {
+        background-color: inherit;
+        color: @list-group-disabled-color-highlight;
+        cursor: @cursor-disabled;
+      }
+
+      &.disabled:hover {
+        @media @pointer-query {
+          background-color: inherit;
+          color: @list-group-disabled-color-highlight;
+          cursor: @cursor-disabled;
+        }
+      }
+    }
+  }
+}
