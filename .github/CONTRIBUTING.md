@@ -6,7 +6,9 @@ Read the general [adidas contributing guidelines](https://github.com/adidas/adid
 
 Eslint and Stylelint are used to check the JavaScript coding style of the different configurations:
 
-> npm run lint
+```
+npm run lint
+```
 
 ### Releasing a package
 

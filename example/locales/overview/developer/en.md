@@ -35,7 +35,33 @@ Currently **YARN** has 2 different views:
 
 Install by running the following command in terminal:
 
-> npm install @adidas/yarn-design-system
+```
+npm install @adidas/yarn-design-system
+```
+
+Load the library files in the HTML of your application:
+
+```html
+<!-- YARN core -->
+<link rel="stylesheet" href="node_modules/@adidas/yarn-design-system/dist/yarn.css">
+
+<!-- YARN assets -->
+<link rel="stylesheet" href="node_modules/@adidas/yarn-design-system/dist/yarn-icon.css">
+<link rel="stylesheet" href="node_modules/@adidas/yarn-design-system/dist/yarn-logo.css">
+
+<!-- YARN JavaScript functions (optional) -->
+<script type="text/javascript" href="node_modules/@adidas/yarn-design-system/dist/yarn.js">
+```
+
+Or import them in your preprocessed CSS files with `@import`:
+
+```css
+@import '~@adidas/yarn-design-system/dist/yarn.css';
+@import '~@adidas/yarn-design-system/dist/yarn-icon.css';
+@import '~@adidas/yarn-design-system/dist/yarn-logo.css';
+```
+
+Or load them using [webpack][webpack] or another similar tool.
 
 ## font definitions
 
@@ -62,8 +88,9 @@ There are several ways to define the **YARN** fonts:
 
 Fork it and play!
 
-[yarn]: https://github.com/adidas/adidas-yarn-design-system
+[open-source-typefaces]: https://github.com/KyleAMathews/typefaces
 [poppins]: https://fonts.google.com/specimen/Poppins
 [roboto]: https://fonts.google.com/specimen/Roboto
 [roboto-mono]: https://fonts.google.com/specimen/Roboto+Mono
-[open-source-typefaces]: https://github.com/KyleAMathews/typefaces
+[webpack]: https://webpack.js.org/
+[yarn]: https://github.com/adidas/adidas-yarn-design-system

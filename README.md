@@ -37,26 +37,34 @@ adidas is not responsible for the usage of this software for different purposes 
 
 ## Requirements and dependencies
 
-The main dependency of this library is [Bootstrap][bootstrap], which is the core of **YARN**, and the adidas
-fonts. Besides this, it is using other runtime dependencies which are listed in the `package.json`.
+[NodeJS and NPM][node] are required to work with the repository.
 
-[NodeJS/NPM](https://nodejs.org/) are required to work with the repository.
+Ther are no runtime dependencies, because, despite the fact that this library is based on Bootstrap, the source
+code has been compiled along with Bootstrap.
+
+On the other hand, the use can redefine the fonts to be displayed, read [font definitions](#font-definitions) section.
 
 ## Installation and running
 
 - In development mode:
-    > npm install
+    ```
+    npm install
+    ```
 - Run time:
-    > npm install @adidas/yarn-design-system
+    ```
+    npm install @adidas/yarn-design-system
+    ```
 
 Load the library files in the HTML of your application:
 
 ```html
 <!-- YARN core -->
 <link rel="stylesheet" href="node_modules/@adidas/yarn-design-system/dist/yarn.css">
+
 <!-- YARN assets -->
 <link rel="stylesheet" href="node_modules/@adidas/yarn-design-system/dist/yarn-icon.css">
 <link rel="stylesheet" href="node_modules/@adidas/yarn-design-system/dist/yarn-logo.css">
+
 <!-- YARN JavaScript functions (optional) -->
 <script type="text/javascript" href="node_modules/@adidas/yarn-design-system/dist/yarn.js">
 ```
@@ -69,13 +77,7 @@ Or import them in your preprocessed CSS files with `@import`:
 @import '~@adidas/yarn-design-system/dist/yarn-logo.css';
 ```
 
-The only one required dependency in runtime is adidas fonts, which have to be loaded before the library.
-
-```html
-<link rel="stylesheet" href="node_modules/@adidas/resources/fonts/adihaus.css">
-<link rel="stylesheet" href="node_modules/@adidas/resources/fonts/adihaus-din.css">
-<link rel="stylesheet" href="node_modules/@adidas/resources/fonts/adineue.css">
-```
+Or load them using [webpack][webpack] or another similar tool.
 
 Once the files have been loaded, in order to enable **YARN**, the main `yarn` class have to be placed
 in the `<body/>` element of the page.
@@ -83,7 +85,7 @@ in the `<body/>` element of the page.
 ```html
 <body class="yarn">
   <div class="page-container">
-    <div class="header"></div>
+    <header class="header"></header>
     <div class="tabbar"></div>
     <div class="toolbar"></div>
     <main class="main">
@@ -122,7 +124,9 @@ The way to do it is using static CDN files or local files, to be able to point t
 safe way. [GitHub][open-source-typefaces] (via NPM) provides a lot of open source typefaces (MIT license) which can be loaded as local files in `woff` and `woff2` formats, which are compatible with modern browsers.
 
 1. Fonts installation:
-    > npm install typeface-poppins typeface-roboto typeface-roboto-mono
+    ```
+    npm install typeface-poppins typeface-roboto typeface-roboto-mono
+    ```
 2. Font definitions file loaded within the project files:
     - Do not forget to include the local fallbacks.
     - If the file is processed by `webpack`, the fonts can be pointed using: `~typeface-NAME/files/FONT-FILE`.
@@ -174,9 +178,13 @@ The library consists of two parts:
 Both are independent and they have different scripts to run them.
 
 - Library:
-    > npm run build
+    ```
+    npm run build
+    ```
 - Example:
-    > npm run build:example
+    ```
+    npm run build:example
+    ```
 
 The example can be delivered as [SPA][single-page-application] using the script `npm run build:example:spa`, executed after building the library.
 
@@ -188,9 +196,13 @@ The script to develop this project have to be executed in different terminals be
 continuously running checking changes.
 
 - Library:
-    > npm run start:lib
+    ```
+    npm run start:lib
+    ```
 - Example:
-    > npm run start:example
+    ```
+    npm run start:example
+    ```
 
 Once the library is ready, and the example has been built, the application is ready in localhost: `http://localhost:3000`.
 
@@ -212,7 +224,7 @@ Everything is imported from the main `yarn.less` file (icons and logos from `yar
 
 ### Style Guide
 
-**YARN** library follows the [adidas coding style guidelines][adidas-style-guide](https://tools.adidas-group.com/confluence/display/DSBP/Coding+guidelines).
+**YARN** library follows the [adidas coding style guidelines][adidas-style-guide].
 
 #### File naming
 
@@ -258,22 +270,24 @@ NOTICE: The software has been designed solely for the purpose of giving some CSS
 
 If you want to contact adidas regarding the software, you can mail us at _opensourcesoftware@adidas.com_.
 
-For further information open the [adidas terms and conditions](https://github.com/adidas/adidas-contribution-guidelines/wiki/Terms-and-conditions) page.
+For further information open the [adidas terms and conditions][term-and-conditions] page.
 
 ### License
 
 [MIT](LICENSE)
 
-[bootstrap]: http://getbootstrap.com/
-[webpack]: https://webpack.js.org/
-[webpack-hot-module-replacement]: https://webpack.js.org/concepts/hot-module-replacement/
-[single-page-application]: https://en.wikipedia.org/wiki/Single-page_application
 [adidas-style-guide]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Coding-style-guidelines
+[bootstrap]: https://getbootstrap.com/docs/3.3/
 [bem]: http://getbem.com/introduction/
 [bem-naming]: http://getbem.com/naming/
-[vuejs]: https://vuejs.org/
+[node]: https://nodejs.org/
 [nuxt]: https://nuxtjs.org/
+[open-source-typefaces]: https://github.com/KyleAMathews/typefaces
 [poppins]: https://fonts.google.com/specimen/Poppins
 [roboto]: https://fonts.google.com/specimen/Roboto
 [roboto-mono]: https://fonts.google.com/specimen/Roboto+Mono
-[open-source-typefaces]: https://github.com/KyleAMathews/typefaces
+[single-page-application]: https://en.wikipedia.org/wiki/Single-page_application
+[term-and-conditions]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Terms-and-conditions
+[vuejs]: https://vuejs.org/
+[webpack]: https://webpack.js.org/
+[webpack-hot-module-replacement]: https://webpack.js.org/concepts/hot-module-replacement/

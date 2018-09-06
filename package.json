@@ -12,11 +12,6 @@
     "Jaime Pastor <moelders@gmail.com>"
   ],
   "homepage": "http://adidas.github.io/adidas-yarn-design-system/",
-  "dependencies": {
-    "nuxt": "1.4.2",
-    "showdown": "1.8.6",
-    "vue-i18n": "7.6.0"
-  },
   "devDependencies": {
     "autoprefixer": "8.6.5",
     "babel-core": "6.26.3",
@@ -42,14 +37,17 @@
     "less": "3.8.1",
     "less-loader": "4.1.0",
     "less2sass": "github:RecuencoJones/less2sass",
+    "nuxt": "1.4.2",
     "postcss-loader": "2.1.6",
     "raw-loader": "0.5.1",
+    "showdown": "1.8.6",
     "source-map-loader": "0.2.4",
     "stylelint": "8.4.0",
     "stylelint-config-adidas": "1.0.1",
     "typeface-poppins": "0.0.54",
     "typeface-roboto": "0.0.54",
     "typeface-roboto-mono": "0.0.54",
+    "vue-i18n": "7.6.0",
     "webpack": "3.8.1"
   },
   "scripts": {

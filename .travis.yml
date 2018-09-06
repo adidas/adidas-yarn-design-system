@@ -1,0 +1,20 @@
+dist: trusty
+language: node_js
+node_js:
+- "10"
+
+install:
+- npm install
+
+script:
+- npm run lint
+- npm run build
+- npm run doc
+
+deploy:
+- provider: pages
+  skip-cleanup: true
+  local-dir: ./docs
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
