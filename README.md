@@ -186,9 +186,28 @@ Both are independent and they have different scripts to run them.
     npm run build:example
     ```
 
-The example can be delivered as [SPA][single-page-application] using the script `npm run build:example:spa`, executed after building the library.
+The library is compiled in the `dist` folder, whereas the example is created in the `docs` folder.
 
-The library is compiled in the `dist` folder, while the example is created in the `docs` folder.
+### Example as Single Page Application
+
+The example can be delivered as [Single Page Application][single-page-application] using the script `npm run build:example:spa`, executed after building the library. It accepts two environment variables:
+
+- `HOST`: host where the application will be deployed, the protocol should be omitted.
+- `BASE`: path where the application will be available.
+
+Example deploying the application in `https://name.domain:port/app`:
+
+```
+HOST=//name.domain:port BASE=app npm run build:example:spa
+```
+
+### Documentation
+
+The documentation is generated using the script `doc`, which generates the example in [SPA][single-page-application] mode. It also accepts the environment variables.
+
+```
+HOST=//name.domain:port BASE=app npm run doc
+```
 
 ## Development
 
@@ -250,6 +269,19 @@ The texts and documents are located in `example/locales` to be able to show the 
 languages. The `.md` files contain the content of full pages, while the `[lang].json` files have only
 titles and common words.
 
+### Code linting
+
+The LESS and the Vue source code are linted using the adidas [stylelint][stylelint] and
+[ESLint][eslint] linter configurations respectively.
+
+There are separated scripts to lint the different sources and a global one to execute all together:
+
+```
+npm run lint
+```
+
+_Note:_ it is mandatory to fix all the issues before pushing the code.
+
 ## FAQ
 
 ### Maintainers
@@ -270,7 +302,7 @@ NOTICE: The software has been designed solely for the purpose of giving some CSS
 
 If you want to contact adidas regarding the software, you can mail us at _opensourcesoftware@adidas.com_.
 
-For further information open the [adidas terms and conditions][term-and-conditions] page.
+For further information open the [adidas terms and conditions][terms-and-conditions] page.
 
 ### License
 
@@ -280,6 +312,7 @@ For further information open the [adidas terms and conditions][term-and-conditio
 [bootstrap]: https://getbootstrap.com/docs/3.3/
 [bem]: http://getbem.com/introduction/
 [bem-naming]: http://getbem.com/naming/
+[eslint]: https://eslint.org/
 [node]: https://nodejs.org/
 [nuxt]: https://nuxtjs.org/
 [open-source-typefaces]: https://github.com/KyleAMathews/typefaces
@@ -287,7 +320,8 @@ For further information open the [adidas terms and conditions][term-and-conditio
 [roboto]: https://fonts.google.com/specimen/Roboto
 [roboto-mono]: https://fonts.google.com/specimen/Roboto+Mono
 [single-page-application]: https://en.wikipedia.org/wiki/Single-page_application
-[term-and-conditions]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Terms-and-conditions
+[stylelint]: https://stylelint.io/
+[terms-and-conditions]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Terms-and-conditions
 [vuejs]: https://vuejs.org/
 [webpack]: https://webpack.js.org/
 [webpack-hot-module-replacement]: https://webpack.js.org/concepts/hot-module-replacement/

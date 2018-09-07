@@ -84,8 +84,8 @@
     "less"
   ],
   "files": [
-    "src",
     "dist",
+    "src",
     "README.md",
     "CHANGELOG.md",
     "LICENSE"
