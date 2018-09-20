@@ -1,6 +1,7 @@
 const path = require('path');
 const url = require('url');
 const readMarkdownFiles = require('./scripts/markdown-files.js');
+const readStyleVariables = require('./scripts/style-files.js');
 
 const { HOST = '/_nuxt/', BASE = '' } = process.env;
 const _BASE = BASE ? `/${ path.basename(BASE) }/` : '';
@@ -38,7 +39,8 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/bootstrap.js',
-    '~/plugins/i18n.js'
+    '~/plugins/i18n.js',
+    '~/plugins/window.js'
   ],
   router: {
     base: _BASE,
@@ -64,7 +66,12 @@ module.exports = {
     dir: './docs'
   },
   env: {
+    markdown: readMarkdownFiles('example/locales'),
     routes: globalRoutes,
-    markdown: readMarkdownFiles('example/locales')
+    style: {
+      variable: readStyleVariables('src/less/variables/variables.less'),
+      color: readStyleVariables('src/less/variables/colors.less'),
+      typography: readStyleVariables('src/less/variables/typography.less')
+    }
   }
 };

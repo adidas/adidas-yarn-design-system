@@ -2,11 +2,18 @@
 
 .main {
   height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 auto;
-  .position(relative);
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+
+  @media screen and (min-width: @screen-xs-max) {
+    flex: 1 1 auto;
+    .flex(row);
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    padding-top: @header-height + @toolbar-height;
+  }
 }
 
 .container {
@@ -16,10 +23,11 @@
   width: 100%;
   flex: 1 1 auto;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar;
 
   &-fluid,
   &-fluid--mobile {
-    max-width: @grid-max-width;
     .container-fixed(@custom-gutter);
   }
 
@@ -30,7 +38,7 @@
   }
 
   @media screen and (max-width: @screen-xs-max) {
-    padding-top: @toolbar-height;
+    display: block;
   }
 
   .section {

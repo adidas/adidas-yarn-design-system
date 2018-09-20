@@ -1,7 +1,10 @@
 // Transform properties
-.transform(@property, @value) {
+.transform(@property, @value: null) {
   transition-property: @property;
   transition-timing-function: ease-in;
   transition-duration: @transition-speed;
-  @{property}: @value;
+
+  & when not (@value = null) {
+    @{property}: @value;
+  }
 }

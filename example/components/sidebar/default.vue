@@ -1,29 +1,39 @@
 <template>
   <aside class="sidebar"
       :class="{
-        open: $store.state.sidebarOpen,
-        closed: !$store.state.sidebarOpen
+        open: sidebarOpen,
+        closed: !sidebarOpen
       }">
-    <div class="sidebar__block">
-      <div class="panel-group" id="sidebarLinks" aria-multiselectable="true">
+    <div class="sidebar__main">
+      <div class="panel-group">
         <template v-for="route in routes">
           <panel-tab v-if="route.children"
               :key="route.name"
-              :name="`sidebar${ route.name }`"
-              parent="#sidebarLinks">
-            <nuxt-link class="panel-title__title link label" :to="{ name: route.name }" slot="tabTitle">
+              :name="`sidebar${ route.name }`">
+            <nuxt-link class="panel-title__title link label"
+                :to="{ name: route.name }"
+                slot="tabTitle"
+                @click.native="navigate">
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
             <ul class="list-group list-group--vertical" slot="tabContent">
-              <li class="list-group-item list-group-item-light" v-for="subroute in route.children" :key="subroute.name">
-                <nuxt-link class="link label" :to="{ name: subroute.name }">
+              <li class="list-group-item list-group-item-light"
+                  v-for="subroute in route.children"
+                  :key="subroute.name">
+                <nuxt-link class="link label"
+                    :to="{ name: subroute.name }"
+                    @click.native="navigate">
                   {{ $t(`views.${ subroute.name }.name`) }}
                 </nuxt-link>
               </li>
             </ul>
           </panel-tab>
           <panel-item v-else :key="route.name">
-            <nuxt-link class="link label" :to="{ name: route.name }">{{ $t(`views.${ route.name }.name`) }}</nuxt-link>
+            <nuxt-link class="link label"
+                :to="{ name: route.name }"
+                @click.native="navigate">
+              {{ $t(`views.${ route.name }.name`) }}
+            </nuxt-link>
           </panel-item>
         </template>
       </div>
@@ -32,12 +42,14 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import { getRoutes } from '~/services/routes';
 import panelItem from './panel-item.vue';
 import panelTab from './panel-tab.vue';
 
 export default {
   computed: {
+    ...mapGetters([ 'sidebarOpen' ]),
     routes() {
       const routes = [];
       const sidebarRoutes = getRoutes()
@@ -63,6 +75,9 @@ export default {
 
       return routes;
     }
+  },
+  methods: {
+    ...mapActions([ 'navigate' ])
   },
   components: {
     panelItem,

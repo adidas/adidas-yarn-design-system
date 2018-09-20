@@ -4,15 +4,15 @@
       <div class="panel-title"
           role="button"
           :data-parent="parent"
-          :data-target="`#${name}Items`"
+          :data-target="`#${ name }Items`"
           data-toggle="collapse">
         <slot name="tabTitle"></slot>
       </div>
     </div>
     <div class="panel-collapse collapse"
-        :id="`${name}Items`"
+        :id="`${ name }Items`"
         role="tabpanel"
-        :aria-labelledby="`#${name}`"
+        :aria-labelledby="`#${ name }`"
         v-if="$slots.tabContent">
       <div class="panel-body">
         <slot name="tabContent"></slot>

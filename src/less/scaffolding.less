@@ -7,6 +7,10 @@
 // Scaffolding
 // --------------------------------------------------
 
+@-ms-viewport {
+  width: auto !important;
+}
+
 html {
   background-color: @body-bg;
   color: @text-color;
@@ -14,12 +18,21 @@ html {
   font-size: @font-size-base;
   line-height: @line-height-base;
   -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: fade(@primary-black, 0);
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow: hidden;
+
+  @media screen and (min-width: @screen-xs-max) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    overflow-y: auto;
+    -ms-overflow-style: scrollbar;
+  }
 }
 
 body {
@@ -27,10 +40,12 @@ body {
   margin: inherit;
   padding: inherit;
   height: inherit;
+  overflow: hidden;
 }
 
 .page-container {
-  height: 100%;
-  width: 100%;
-  .flex(column);
+  @media screen and (min-width: @screen-xs-max) {
+    height: 100%;
+    .flex(column);
+  }
 }

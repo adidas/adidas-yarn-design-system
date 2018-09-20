@@ -1,20 +1,18 @@
 .footer {
   background-color: @primary-white;
   border-top: 1px solid @primary-lightgray;
-  padding: @padding-small-vertical;
+  padding: @padding-small-vertical @padding-base-horizontal;
   height: @footer-height;
   flex: 0 0 auto;
 
   &--desktop {
+    .flex(row, center, space-between);
     .hidden-xs();
   }
 
   &--mobile {
+    .flex(column, center);
     .visible-xs();
-  }
-
-  &__container {
-    .flex(row, center, space-between);
   }
 
   &__left,
@@ -29,5 +27,9 @@
 
   &__right {
     justify-content: flex-end;
+
+    @media screen and (max-width: @screen-xs-max) {
+      text-align: right;
+    }
   }
 }

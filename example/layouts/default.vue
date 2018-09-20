@@ -28,3 +28,13 @@ export default {
   }
 };
 </script>
+
+<style lang="less">
+  @import '../../src/less/variables/main';
+
+  .main {
+    @media screen and (max-width: @screen-xs-max) {
+      margin-bottom: 10rem;
+    }
+  }
+</style>

@@ -1,20 +1,39 @@
 .tile {
   @tile-gutter-width: @grid-gutter-width / 2;
-  @tile-padding-bottom: 2.5em;
+  @tile-footer-group-height: 2.25em;
+  @tile-footer-group-increment: .75em;
   @tile-height: 12.5em;
+  @tile-footer-offset: 2.5em;
   @tile-label-size: 3.5em;
-  @tile-footer-group-height: 2.5em;
 
   border: 1px solid @primary-lightgray;
   margin: (@rhythm * 2) 0;
-  padding-bottom: @tile-padding-bottom;
+  padding-bottom: @tile-footer-group-height;
   overflow: hidden;
   .position(relative);
 
   &:hover {
-    @media @pointer-query {
-      .tile__footer {
+    .tile__footer {
+      @media @pointer-query {
         .transform(transform, translateX(0));
+      }
+
+      &__group {
+        @media @pointer-query {
+          line-height: 1.25;
+          height: @tile-footer-group-height + @tile-footer-group-increment;
+          text-overflow: unset;
+          white-space: unset;
+          overflow: unset;
+        }
+      }
+
+      &__subheader__text {
+        @media @pointer-query {
+          text-overflow: auto;
+          white-space: unset;
+          overflow: unset;
+        }
       }
     }
   }
@@ -71,30 +90,29 @@
   &__footer {
     background-color: @primary-lightgray;
     color: @primary-nickel;
-    max-height: @tile-height;
+    max-height: @tile-height - @tile-footer-offset;
     overflow: hidden;
-    .transform(transform, translateY(calc(100% ~'-' @tile-padding-bottom)));
+    .transform(transform, translateY(calc(100% ~'-' @tile-footer-group-height)));
     .position(absolute, auto, 0, 0, 0);
 
     &__group {
       color: @primary-black;
-      padding: @rhythm;
+      padding: @padding-small-vertical @padding-base-horizontal;
       margin: 0;
       line-height: @tile-footer-group-height - (@rhythm * 2);
       height: @tile-footer-group-height;
       .font-family-heading-bold();
       .text-center();
+      .text-ellipsis();
     }
 
     &__subheader {
       padding: .5em;
-      max-height: @tile-height - @tile-padding-bottom;
+      max-height: @tile-height - @tile-footer-group-height - @tile-footer-group-increment - @tile-footer-offset;
       overflow-y: auto;
 
       &__text {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        .text-ellipsis();
       }
     }
 

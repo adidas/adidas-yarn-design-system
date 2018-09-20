@@ -41,15 +41,16 @@
 //** Sidebar options
 @transition-speed: .6s;
 @sidebar-width: 16em;
+@sidebar-width-mobile: 90%;
 @sidebar-padding-horizontal: 1rem;
 @sidebar-padding-vertical: .75em;
 
 //== Elements sizes
 //
 //
-@header-height: 3em;
-@tabbar-height: 3em;
-@toolbar-height: 2.5em;
+@header-height: 3rem;
+@tabbar-height: 2.5rem;
+@toolbar-height: 2.5rem;
 
 //== Footer
 @footer-height: auto;
@@ -79,7 +80,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family: inherit;
-@headings-font-weight: 500;
+@headings-font-weight: 700;
 @headings-line-height: 1;
 @headings-color: inherit;
 
@@ -95,7 +96,7 @@
 @padding-small-vertical: .25rem;
 @padding-small-horizontal: .25rem;
 
-@padding-xs-vertical: .0625rem;
+@padding-xs-vertical: .125rem;
 @padding-xs-horizontal: .25rem;
 
 @line-height-large: 1.5;
@@ -148,7 +149,7 @@
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 @btn-size-height: 2.5rem;
-@btn-font-weight: normal;
+@btn-font-weight: 400;
 
 @btn-default-color: @primary-nickel;
 @btn-default-bg: @primary-white;
@@ -275,6 +276,7 @@
 //
 // Note: These variables are not generated into the Customizer.
 
+@zindex-sidebar: 980;
 @zindex-navbar: 1000;
 @zindex-dropdown: 1010;
 @zindex-navbar-fixed: 1030;
@@ -293,7 +295,7 @@
 @screen-phone: @screen-xs-min;
 
 // Small screen / tablet
-@screen-sm: 62rem;
+@screen-sm: 60rem;
 @screen-sm-min: @screen-sm;
 @screen-tablet: @screen-sm-min;
 
@@ -308,9 +310,9 @@
 @screen-lg-desktop: @screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
-@screen-xs-max: (@screen-sm-min - 1rem);
-@screen-sm-max: (@screen-md-min - 1rem);
-@screen-md-max: (@screen-lg-min - 1rem);
+@screen-xs-max: @screen-sm-min;
+@screen-sm-max: @screen-md-min;
+@screen-md-max: @screen-lg-min;
 
 //== Grid system
 //
@@ -611,7 +613,7 @@
 
 @alert-padding: .5em;
 @alert-border-radius: @border-radius-base;
-@alert-link-font-weight: bold;
+@alert-link-font-weight: 700;
 
 @alert-success-bg: @state-success-bg;
 @alert-success-text: @state-success-text;
@@ -764,7 +766,7 @@
 //** Badge background color in active nav link
 @badge-active-bg: @primary-white;
 
-@badge-font-weight: bold;
+@badge-font-weight: 700;
 @badge-line-height: 1;
 @badge-border-radius: .5em;
 
@@ -803,7 +805,7 @@
 //
 //##
 
-@close-font-weight: normal;
+@close-font-weight: 400;
 @close-color: inherit;
 @close-text-shadow: 0 1px 0 @primary-white;
 

@@ -26,14 +26,14 @@
   }
 
   &.link--highlight {
-    .highlight(@primary-lightgray, @primary-gray, @primary-gray, @primary-lightgray);
+    .highlight-link(@primary-lightgray, @primary-gray, @primary-gray, @primary-lightgray);
   }
 
   &.link--light {
     .link(@primary-darkgray, @blue-100, @primary-silver);
 
     &.link--light--highlight {
-      .highlight(@primary-lightgray, @primary-gray, @primary-gray, @primary-lightgray);
+      .highlight-link(@primary-lightgray, @primary-gray, @primary-gray, @primary-lightgray);
     }
   }
 
@@ -41,7 +41,7 @@
     .link(@primary-silver, @primary-white, @primary-darkgray);
 
     &.link--dark--highlight {
-      .highlight(@primary-nickel, @primary-gray, @primary-darkgray, @primary-nickel);
+      .highlight-link(@primary-nickel, @primary-gray, @primary-darkgray, @primary-nickel);
     }
   }
 }

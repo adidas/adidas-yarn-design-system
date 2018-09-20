@@ -7,20 +7,15 @@
 @icon-font-svg-id: @icon-font-name;
 
 @font-face {
-  src: url('@{icon-font-path}/@{icon-font-name}.eot');
-  src:
-    url('@{icon-font-path}/@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
-    url('@{icon-font-path}/@{icon-font-name}.woff') format('woff'),
-    url('@{icon-font-path}/@{icon-font-name}.woff2') format('woff2'),
-    url('@{icon-font-path}/@{icon-font-name}.ttf') format('truetype'),
-    url('@{icon-font-path}/@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
   font-family: @icon-font-name;
+  src: url('@{icon-font-path}/@{icon-font-name}.woff2') format('woff2'),
+    url('@{icon-font-path}/@{icon-font-name}.woff') format('woff');
 }
 
 .yarn-icon {
   font-family: @icon-font-name !important;
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
@@ -1005,5 +1000,13 @@
 
   &--swithes-to-advanced-visualisation:before {
     content: '\e9f4';
+  }
+
+  &--select-related:before {
+    content: "\e9f5";
+  }
+
+  &--three-d:before {
+    content: "\e9f6";
   }
 }

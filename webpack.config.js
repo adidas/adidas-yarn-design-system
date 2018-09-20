@@ -103,6 +103,11 @@ module.exports = {
                 sourceMap: true
               }
             }, {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true
+              }
+            }, {
               loader: 'less-loader',
               options: {
                 sourceMap: true

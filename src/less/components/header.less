@@ -5,7 +5,16 @@
   background-color: @primary-black;
   color: @primary-white;
   height: @header-height;
-  flex: 0 0 auto;
+
+  @media screen and (min-width: @screen-xs-max) {
+    flex: 0 0 auto;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    position: fixed;
+    z-index: @zindex-navbar-fixed;
+  }
 
   .yarn-icon {
     font-size: @icon-font-size;

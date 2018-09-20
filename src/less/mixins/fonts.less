@@ -1,37 +1,73 @@
 .font-family-heading-light() {
   font-family: @font-family-heading;
-  font-weight: lighter;
+  font-weight: 100;
   font-style: normal;
   text-transform: uppercase;
+}
+
+.font-family-heading-light-italic() {
+  .font-family-heading-light();
+
+  font-style: italic;
 }
 
 .font-family-heading-bold() {
   font-family: @font-family-heading;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
 }
 
+.font-family-heading-bold-italic() {
+  .font-family-heading-bold();
+
+  font-style: italic;
+}
+
 .font-family-base-light() {
   font-family: @font-family-base;
-  font-weight: lighter;
+  font-weight: 100;
   font-style: normal;
 }
 
 .font-family-base-light-italic() {
-  font-family: @font-family-base;
-  font-weight: lighter;
+  .font-family-base-light();
+
   font-style: italic;
 }
 
 .font-family-base-regular() {
   font-family: @font-family-base;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
+}
+
+.font-family-base-regular-italic() {
+  .font-family-base-regular();
+
+  font-style: italic;
 }
 
 .font-family-base-bold() {
   font-family: @font-family-base;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
+}
+
+.font-family-base-bold-italic() {
+  .font-family-base-bold();
+
+  font-style: italic;
+}
+
+.font-family-monospace-regular() {
+  font-family: @font-family-monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-family-monospace-regular-italic() {
+  .font-family-monospace-regular();
+
+  font-style: italic;
 }
