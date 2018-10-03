@@ -1,3 +1,37 @@
+# 1.2.0
+
+- Added `multiselect` less component.
+- Added `choicesjs-stencil` library as dependency for multiselect components.
+- Renamed `HOST` env variable to `HOSTNAME` in order not to overwrite it.
+- Updated example.
+
+### [ logos ]
+
+- Renamed logos:
+  - `yarn-logo adidas` -> `yarn-logo yarn-logo--adidas`.
+  - `yarn-logo yarn` -> `yarn-logo yarn-logo--yarn`.
+
+### [ multiselect ]
+
+- Added `.multiselect` class to customize `choicesjs-stencil` web component with YARN style.
+
+### [ palette ]
+
+- Added classes to set the `border-color`.
+- Renamed classes according to their variable names for `color` and `background-color`:
+  - `--black` to `--primary-black`.
+  - `--silver` to `--primary-silver`.
+  - `--white` to `--primary-white`.
+
+### [ variables ]
+
+- Fixed values.
+- Added `@font-size-x-small` and `@font-size-x-large`.
+
+### [ example ]
+
+- Added multiselect component page.
+
 # 1.1.0
 
 - Added mobile view for the main layout.

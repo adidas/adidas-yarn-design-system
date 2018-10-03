@@ -1,18 +1,19 @@
 const path = require('path');
 const url = require('url');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const readMarkdownFiles = require('./scripts/markdown-files.js');
 const readStyleVariables = require('./scripts/style-files.js');
 
-const { HOST = '/_nuxt/', BASE = '' } = process.env;
+const { HOSTNAME = '/_nuxt/', BASE = '' } = process.env;
 const _BASE = BASE ? `/${ path.basename(BASE) }/` : '';
 const globalRoutes = [];
 
 module.exports = {
   srcDir: './example',
   build: {
-    vendor: [],
-    plugins: [],
-    publicPath: url.resolve(HOST, _BASE)
+    vendor: [ 'choicesjs-stencil' ],
+    plugins: [ new CopyWebpackPlugin([{ from: './node_modules/choicesjs-stencil/dist', to: './' }]) ],
+    publicPath: url.resolve(HOSTNAME, _BASE)
   },
   head: {
     title: 'adidas YARN Design System',
@@ -38,8 +39,8 @@ module.exports = {
     '~/styles/style.less'
   ],
   plugins: [
-    '~/plugins/bootstrap.js',
     '~/plugins/i18n.js',
+    '~/plugins/vendor.js',
     '~/plugins/window.js'
   ],
   router: {

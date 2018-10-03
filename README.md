@@ -11,14 +11,15 @@
 - Footer: it is shown fixed at the bottom of the screen.
 - Main container: it fits the available screen between the header/tabbar/toolbar and the footer. It is the only container which should be able to scroll.
 
-**YARN** is based on [Bootstrap v3][bootstrap], which is a front-end framework used to define HTML elements
-like grids, typography, inputs and other  interface components, as well as optional JS extensions.
+**YARN** is based on [Bootstrap v3][bootstrap], which is a front-end framework used to define HTML elements like grids, typography, inputs and other interface components, as well as optional JS extensions.
 
 Currently **YARN** has two different views based on the default font size of `16px`.
 
 - Mobile version: `screen width < 60rem` (`960px`).
   - Left sidebar and tabbar components are hidden by default.
 - Desktop version `screen width >= 60rem` (`960px`).
+
+Check all its features on the [**documentation page**][yarn-documentation] (work in progress).
 
 ## Use cases
 
@@ -187,13 +188,13 @@ The library is compiled in the `dist` folder, whereas the example is created in 
 
 The example can be delivered as [Single Page Application][single-page-application] using the script `npm run build:example:spa`, executed after building the library. It accepts two environment variables:
 
-- `HOST`: host where the application will be deployed, the protocol should be omitted.
+- `HOSTNAME`: host where the application will be deployed, the protocol should be omitted.
 - `BASE`: path where the application will be available.
 
 Example deploying the application in `https://name.domain:port/app`:
 
 ```
-HOST=//name.domain:port BASE=app npm run build:example:spa
+HOSTNAME=//name.domain:port BASE=app npm run build:example:spa
 ```
 
 ### Documentation
@@ -201,7 +202,7 @@ HOST=//name.domain:port BASE=app npm run build:example:spa
 The documentation is generated using the script `doc`, which generates the example in [SPA][single-page-application] mode. It also accepts the environment variables.
 
 ```
-HOST=//name.domain:port BASE=app npm run doc
+HOSTNAME=//name.domain:port BASE=app npm run doc
 ```
 
 ## Development
@@ -311,3 +312,4 @@ For further information open the [adidas terms and conditions][terms-and-conditi
 [vuejs]: https://vuejs.org/
 [webpack]: https://webpack.js.org/
 [webpack-hot-module-replacement]: https://webpack.js.org/concepts/hot-module-replacement/
+[yarn-documentation]: https://adidas.github.io/adidas-yarn-design-system/

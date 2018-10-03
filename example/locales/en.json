@@ -160,6 +160,21 @@
         },
         "mobile": "Mobile buttons"
       }
+    },
+    "components-multiselect": {
+      "name": "Multiselect components",
+      "text": "Faceted text selector",
+      "single": "Single value selector",
+      "multiple": "Multiple value selector",
+      "config": {
+        "placeholder": "select...",
+        "no-results": "No results found",
+        "no-choices": "Nothing to select",
+        "item-selection": "Press to choose",
+        "add-item": "Press enter to add <b>\"{value}\"</b>",
+        "max-items": "Maximum {maxItemCount} values",
+        "remove-button": "Remove item: {label}"
+      }
     }
   }
 }

@@ -25,11 +25,11 @@ html {
   padding: 0;
   overflow: hidden;
 
-  @media screen and (min-width: @screen-xs-max) {
+  @media screen and (min-width: @screen-sm) {
     height: 100%;
   }
 
-  @media screen and (max-width: @screen-xs-max) {
+  @media screen and (max-width: @screen-sm) {
     overflow-y: auto;
     -ms-overflow-style: scrollbar;
   }
@@ -44,7 +44,7 @@ body {
 }
 
 .page-container {
-  @media screen and (min-width: @screen-xs-max) {
+  @media screen and (min-width: @screen-sm) {
     height: 100%;
     .flex(column);
   }

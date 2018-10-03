@@ -3,7 +3,7 @@ import { style } from '~/services/style';
 let mobileBreakpoint = 0;
 
 if (process.browser) {
-  mobileBreakpoint = parseInt(style.variable['screen-xs-max'], 10);
+  mobileBreakpoint = parseInt(style.variable['screen-xs-max']);
 }
 
 export function isMobile() {
@@ -11,7 +11,7 @@ export function isMobile() {
 
   if (process.browser) {
     const { clientWidth } = window.document.body;
-    const fontSize = parseInt(window.getComputedStyle(document.body).getPropertyValue('font-size'), 10);
+    const fontSize = parseInt(window.getComputedStyle(document.body).getPropertyValue('font-size'));
 
     mobile = clientWidth <= fontSize * mobileBreakpoint;
   }

@@ -3,7 +3,7 @@
     <nav class="header__container">
       <div class="header__left">
         <nuxt-link class="header__brand" :to="{ name: 'index' }">
-          <span class="header__icon yarn-logo adidas"></span>
+          <span class="header__icon yarn-logo yarn-logo--adidas"></span>
           <span class="header__headline">
             {{ $t('meta.yarn') }}
           </span>
