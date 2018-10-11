@@ -1,3 +1,33 @@
+# 1.3.0
+
+- Added plugins section in the README file.
+- Increased vertical margin for paragraph and header elements.
+- Removed multiselect component.
+  - Removed peer dependency `choicesjs-stencil`.
+
+### [ markdown ]
+
+- Added customization for ordered and unordered lists.
+
+### [ multiselect ]
+
+- Removed `.multiselect` class.
+
+### [ palette ]
+
+- Renamed classes according to their variable names for `color`, `background-color` and `border-color`:
+  - `--nickel` to `--primary-nickel`.
+  - `--darkgray` to `--primary-darkgray`.
+  - `--gray` to `--primary-gray`.
+  - `--lightgray` to `--primary-lightgray`.
+
+### [ example ]
+
+- Added plugins page with documentation and list of available plugins.
+- Removed multiselect component page.
+- Removed dependencies: `choicesjs-stencil` and `choices.js`.
+- Added syntax highlight to the markdown renderer using `highlight.js` package.
+
 ## 1.2.1
 
 - Updated ESLint to version 5.
