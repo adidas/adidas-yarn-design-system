@@ -160,6 +160,10 @@
         },
         "mobile": "Mobile buttons"
       }
+    },
+    "plugins": {
+      "name": "Plugins",
+      "description": "CSS extensions for @:meta.yarn"
     }
   }
 }

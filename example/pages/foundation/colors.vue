@@ -34,10 +34,12 @@
             <div class="col-xs-12 col-sm-6">
               <color-sample name="primary-nickel" classes="color--primary-white background-color--primary-nickel"/>
               <color-sample name="primary-gray" classes="color--primary-white background-color--primary-gray"/>
-              <color-sample name="primary-lightgray" classes="color--primary-black background-color--primary-lightgray"/>
+              <color-sample name="primary-lightgray"
+                  classes="color--primary-black background-color--primary-lightgray"/>
             </div>
             <div class="col-xs-12">
-              <color-sample name="primary-white" classes="color--primary-black background-color--primary-white border--black"/>
+              <color-sample name="primary-white"
+                  classes="color--primary-black background-color--primary-white border--black"/>
             </div>
           </div>
         </section>
@@ -59,7 +61,8 @@
           <div class="row">
             <h5 class="col-xs-12">{{ $t('views.foundation-colors.bright-yellow-colors') }}</h5>
             <div class="col-xs-12 col-sm-6">
-              <color-sample name="bright-yellow-100" classes="color--primary-white background-color--bright-yellow-100"/>
+              <color-sample name="bright-yellow-100"
+                  classes="color--primary-white background-color--bright-yellow-100"/>
               <color-sample name="bright-yellow-60" classes="color--primary-white background-color--bright-yellow-60"/>
             </div>
             <div class="col-xs-12 col-sm-6">

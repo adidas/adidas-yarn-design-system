@@ -3,16 +3,18 @@
     <div class="jumbotron">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-          <p>{{ $t('views.overview.name') }}</p>
-          <h2>{{ $t('views.overview-designer.description') }}</h2>
+          <h2>{{ $t('views.plugins.name') }}</h2>
+          <p>{{ $t('views.plugins.description') }}</p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <markdown-renderer type="url" :src="'overview.designer'"/>
+    <section class="section">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <markdown-renderer type="url" :src="'plugins'"/>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
