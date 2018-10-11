@@ -1,3 +1,11 @@
+## 1.2.1
+
+- Updated ESLint to version 5.
+  - Updated adidas configurations, base configurations and plugins.
+- Updated stylelint to version 9.
+  - Updated adidas configuration.
+  - Added `stylelint-config-adidas-bem` configuration.
+
 # 1.2.0
 
 - Added `multiselect` less component.

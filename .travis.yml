@@ -9,7 +9,9 @@ install:
 script:
 - npm run lint
 - npm run build
-- HOSTNAME=//adidas.github.io/ BASE=/adidas-yarn-design-system/ npm run doc
+- if [ "$TRAVIS_BRANCH" == "master" ]; then
+    HOSTNAME=//adidas.github.io/ BASE=/adidas-yarn-design-system/ npm run doc;
+  fi
 
 deploy:
 - provider: npm
