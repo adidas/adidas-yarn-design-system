@@ -30,6 +30,7 @@ module.exports = {
     ]
   },
   css: [
+    './node_modules/highlight.js/styles/github.css',
     './dist/yarn-logo.css',
     './dist/yarn-icon.css',
     './dist/yarn.css',
@@ -37,7 +38,7 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/i18n.js',
-    '~/plugins/vendor.js',
+    '~/plugins/markdown.js',
     '~/plugins/window.js'
   ],
   router: {
