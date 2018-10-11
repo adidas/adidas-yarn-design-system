@@ -31,4 +31,27 @@
   pre {
     padding: @padding-large-vertical;
   }
+
+  ol,
+  ul {
+    padding-inline-start: 1.5rem;
+    margin-bottom: @padding-base-vertical;
+    margin-block-start: @padding-small-horizontal;
+    margin-block-end: @padding-base-horizontal;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    li {
+      word-break: break-word;
+      display: list-item;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
 }
