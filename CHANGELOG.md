@@ -1,6 +1,7 @@
 # 1.3.0
 
-- Added plugins section in the README file.
+- Added ordered/unordered list style.
+- Added documentation about plugins in the README file.
 - Increased vertical margin for paragraph and header elements.
 - Removed multiselect component.
   - Removed peer dependency `choicesjs-stencil`.
