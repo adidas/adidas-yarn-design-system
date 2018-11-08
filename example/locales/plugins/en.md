@@ -26,7 +26,7 @@ Example of source code written in LESS format:
 ```css
 // variables.less
 // -------------------------------
-@import '~@adidas/yarn-design-system/src/less/variables/main';
+@import '~@adidas/yarn-design-system/src/less/variables/main.less';
 
 @color: @blue-100;
 @opacity-disabled: .5;
@@ -51,14 +51,16 @@ Example of source code written in LESS format:
 
 // main.less
 // -------------------------------
-@import 'variables';
+@import 'variables.less';
 
 .yarn {
-  @import 'component-name';
+  @import 'component-name.less';
 }
 ```
 
 ### Available plugins
+
+List of **YARN** compatible plugins.
 
 #### ChoicesJS Stencil Web Component
 
@@ -66,7 +68,7 @@ Plugin for [ChoicesJS Stencil][choicesjs-stencil] Web Component. It adds the cla
 
 [ChoicesJS][choicesjs] is a library to enhance the HTML select and input elements without dependencies.
 
-Check all its features on the [**documentation page**][adidas-plugin-choicesjs-stencil-documentation].
+Check all its features on the [documentation page][adidas-plugin-choicesjs-stencil-documentation].
 
 [adidas-plugin-choicesjs-stencil-documentation]: http://adidas.github.io/adidas-yarn-plugin-choicesjs-stencil/
 [adidas-style-guide]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Coding-style-guidelines
