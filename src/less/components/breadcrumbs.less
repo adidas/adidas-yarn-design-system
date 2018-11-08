@@ -18,9 +18,7 @@
 
       &--short {
         .label {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          .text-ellipsis();
           .transform(width, @min-width);
 
           &:hover {

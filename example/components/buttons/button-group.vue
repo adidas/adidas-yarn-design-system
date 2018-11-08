@@ -1,6 +1,6 @@
 <template>
   <div class="button-group" :class="{ 'button-group--dark': dark }">
-    <h5 :class=" { 'color--white': dark }">
+    <h5 :class=" { 'color--primary-white': dark }">
       {{ $tc('common.button') }}
       {{ $t(`common.colors.${ name }`) }}
     </h5>
