@@ -217,6 +217,9 @@
 //** Small `.form-control` height
 @input-height-small: 1.75rem;
 
+//** Width of the input with feedback
+@input-width-feedback: calc(100% ~'-' (@input-height-base * 1.25));
+
 //** `.form-group` margin
 @form-group-margin-bottom: @rhythm * 2;
 
@@ -228,9 +231,10 @@
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 //** Size of the feedback and addon icons
-@input-group-icon-size: @icon-font-size;
+@input-group-font-size: @font-size-small;
+@input-group-icon-font-size: @icon-font-size;
 //** Padding of the addon element
-@input-group-addon-padding: .3em;
+@input-group-addon-padding: @padding-base-horizontal;
 
 //** Disabled cursor for form controls and buttons.
 @cursor-disabled: default;
@@ -357,7 +361,7 @@
 @navbar-height: 3em;
 @navbar-margin-bottom: 0;
 @navbar-border-radius: @border-radius-base;
-@navbar-padding-horizontal: floor((@grid-gutter-width / 2));
+@navbar-padding-horizontal: @grid-gutter-width / 2;
 @navbar-padding-vertical: ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height: 20em;
 
