@@ -15,6 +15,14 @@
             </div>
           </div>
           <div class="form-group">
+            <label class="control__label" for="readonlyInput">
+              {{ $t('views.components-form-input.sections.basic.readonly') }}
+            </label>
+            <div class="form-control__container">
+              <input type="email" class="form-control" id="readonlyInput" value="readonly text" readonly="readonly"/>
+            </div>
+          </div>
+          <div class="form-group">
             <label class="control__label" for="disabledInput">
               {{ $t('views.components-form-input.sections.basic.disabled') }}
             </label>

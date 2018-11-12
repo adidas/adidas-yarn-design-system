@@ -12,7 +12,7 @@
 @label-margin-left: @padding-large-horizontal;
 @input-near-padding: @padding-small-horizontal;
 @required-star-margin: @form-control-margin;
-@checkbox-tile-size: 3em;
+@checkbox-tile-size: 3rem;
 @checkbox-tile-offset: @form-control-margin;
 
 .form-group {
@@ -70,12 +70,16 @@
     }
 
     &--textarea {
-      height: auto;
-      min-height: @textarea-container-height;
+      height: 100%;
+      width: 100%;
 
-      textarea {
-        height: @textarea-container-height;
-        resize: none;
+      .form-control {
+        line-height: @line-height-base;
+        padding: @padding-small-vertical @padding-base-horizontal;
+        height: inherit;
+        width: inherit;
+        display: block;
+        resize: vertical;
       }
     }
 
@@ -136,7 +140,7 @@
     font-size: @input-group-font-size;
     width: auto;
     height: auto;
-    line-height: 1.5;
+    line-height: @line-height-base;
     margin-right: @feedback-margin;
 
     &.yarn-icon {
@@ -146,10 +150,11 @@
 }
 
 .control {
-  cursor: pointer;
-  display: block;
-  margin: 0;
   padding-left: @font-size-h5;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   .position(relative);
 
   &.disabled {
@@ -170,23 +175,27 @@
   }
 
   &__indicator {
-    font-size: @font-size-h5;
-    transform: translateY(-50%);
-    .position(absolute, 50%, null, null, 0);
+    font-size: @font-size-x-large;
 
     &:before {
       color: @primary-darkgray;
     }
 
-    &.yarn-icon-checkbox {
+    &.yarn-icon--checkbox {
       &:before {
         content: '\e927';
       }
     }
 
-    &.yarn-icon-radio {
+    &.yarn-icon--radio {
       &:before {
         content: '\e993';
+      }
+    }
+
+    .yarn-icon--checkmark {
+      &:before {
+        content: '\e929';
       }
     }
   }
@@ -201,35 +210,38 @@
     }
   }
 
-  &--tiles {
-    display: inline-block;
+  &--checkmark {
     padding-left: 0;
 
-    .control__checkmark {
+    .control__indicator--checkmark {
       border-color: @primary-white transparent transparent;
       border-style: solid;
       border-width: @checkbox-tile-size @checkbox-tile-size 0 0;
       color: @primary-darkgray;
-      font-size: @font-size-h5;
+      font-size: @font-size-base;
       height: @checkbox-tile-size;
       width: @checkbox-tile-size;
+      display: inline-block;
       .position(relative);
 
       &.disabled {
         color: @primary-gray;
       }
 
-      &.checked {
+      &.checked,
+      &:checked {
         border-color: @blue-100 transparent transparent;
         color: @primary-white;
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
           border-color: @primary-gray transparent transparent;
         }
       }
 
       .yarn-icon {
-        .position(absolute, -(@checkbox-tile-size - @checkbox-tile-offset), null, null, @checkbox-tile-offset);
+        font-size: @font-size-x-large;
+        .position(absolute, -(@checkbox-tile-size - (@checkbox-tile-offset * 2)), null, null, @checkbox-tile-offset);
       }
     }
   }
@@ -248,16 +260,24 @@
         color: @blue-100;
       }
 
+      & ~ .control__indicator--checkmark {
+        border-color: @blue-100 transparent transparent;
+
+        .yarn-icon--checkmark {
+          color: @primary-white;
+        }
+      }
+
       & ~ .control__label {
         color: @blue-100;
         .font-family-base-regular();
       }
 
-      & ~ .yarn-icon-radio:before {
+      & ~ .yarn-icon--radio:before {
         content: '\e994';
       }
 
-      & ~ .yarn-icon-checkbox:before {
+      & ~ .yarn-icon--checkbox:before {
         content: '\e928';
       }
     }
@@ -269,6 +289,12 @@
         pointer-events: none;
       }
 
+      & ~ .control__indicator--checkmark {
+        .yarn-icon--checkmark {
+          color: @primary-lightgray;
+        }
+      }
+
       & ~ .control__label {
         color: @list-group-disabled-color;
       }
@@ -277,6 +303,14 @@
     &:disabled:checked {
       & ~ .control__label {
         .font-family-base-regular();
+      }
+
+      & ~ .control__indicator--checkmark {
+        border-color: @primary-gray transparent transparent;
+
+        .yarn-icon--checkmark {
+          color: @primary-white;
+        }
       }
     }
   }

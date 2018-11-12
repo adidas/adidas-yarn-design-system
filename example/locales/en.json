@@ -17,6 +17,10 @@
     "contact": "contact",
     "imprint": "imprint",
     "button": "button",
+    "checked": "checked",
+    "unchecked": "unchecked",
+    "selected": "selected",
+    "disabled": "disabled",
     "color": "color",
     "colors": {
       "blue": "blue",
@@ -187,6 +191,7 @@
         "basic": {
           "name": "Basic inputs",
           "text": "Text input",
+          "readonly": "Readonly input",
           "disabled": "Disabled input",
           "required": "Requird input value"
         },
@@ -209,10 +214,17 @@
       "name": "Checkboxes"
     },
     "components-form-radio": {
-      "name": "Radio buttons"
+      "name": "Radio buttons",
+      "values": {
+        "first": "First value",
+        "second": "Second value",
+        "third": "Third value"
+      }
     },
     "components-form-textarea": {
-      "name": "Textarea"
+      "name": "Textarea",
+      "label": "Free text area",
+      "label-disabled": "Free text area (disabled)"
     },
     "plugins": {
       "name": "Plugins",
