@@ -42,7 +42,24 @@
       "middle": "middle",
       "top": "top",
       "bottom": "bottom"
+    },
+    "input": {
+      "text": "Unput text",
+      "text-left": "@:common.input.text (left)",
+      "text-right": "@:common.input.text (right)",
+      "group": "Unput group",
+      "group-left": "@:common.input.group (left)",
+      "group-right": "@:common.input.group (right)"
+    },
+    "form": {
+      "horizontal-input": "Horizontal input"
     }
+  },
+  "tabs": {
+    "input": "Input",
+    "checkbox": "Checkbox",
+    "radio": "Radio button",
+    "textarea": "Textarea"
   },
   "views": {
     "index": {
@@ -163,6 +180,36 @@
     },
     "components-forms": {
       "name": "Forms"
+    },
+    "components-form-input": {
+      "name": "Form inputs",
+      "sections": {
+        "basic": {
+          "name": "Basic inputs",
+          "text": "Text input",
+          "disabled": "Disabled input",
+          "required": "Requird input value"
+        },
+        "feedback": {
+          "name": "Feedback inputs",
+          "success": "Success state",
+          "warning": "Warning state",
+          "error": "Error state",
+          "basic": "Basic feedback"
+        },
+        "horizontal": {
+          "name": "Horizontal form"
+        },
+        "inline": {
+          "name": "Inline form"
+        }
+      }
+    },
+    "components-form-checkbox": {
+      "name": "Form checkboxes"
+    },
+    "components-form-radio": {
+      "name": "Form radio buttons"
     },
     "plugins": {
       "name": "Plugins",

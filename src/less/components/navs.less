@@ -139,12 +139,13 @@
 
     &.active,
     &:focus {
-      border-bottom: 1px solid @blue-100;
       background-color: @primary-white;
-      cursor: default;
+      border-bottom: 1px solid @blue-100;
 
       .nav-link {
+        background-color: inherit;
         color: @blue-100;
+        cursor: default;
       }
     }
 
