@@ -1,13 +1,9 @@
 <template>
   <div class="container">
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-          <p>{{ $t('views.components.name') }}</p>
-          <h2>{{ $t('views.components-buttons.name') }}</h2>
-        </div>
-      </div>
-    </div>
+    <page-title>
+      <p>{{ $t('views.components.name') }}</p>
+      <h2>{{ $t('views.components-buttons.name') }}</h2>
+    </page-title>
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <section class="section">

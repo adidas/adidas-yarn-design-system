@@ -1,5 +1,7 @@
 <template>
-  <tabs-container :page="'input'" :title="$t('views.components-form-input.name')">
+  <tabs-container :page="'input'"
+      :title="$t('views.components-form-input.name')"
+      :section="$t('views.components-forms.name')">
     <div class="container">
       <section class="section row">
         <h4 class="col-xs-12">{{ $t('views.components-form-input.sections.basic.name') }}</h4>

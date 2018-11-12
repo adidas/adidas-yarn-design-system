@@ -1,13 +1,9 @@
 <template>
   <div class="container overview">
-    <div class="jumbotron">
-      <div class="row overview__header">
-        <div class="overview__header__title col-xs-12 col-sm-8 col-sm-offset-2">
-          <p class="overview__header__title__description ">Overview</p>
-          <h2 class="overview__header__title__subtitle ">be part of the adidas YARN design system</h2>
-        </div>
-      </div>
-    </div>
+    <page-title>
+      <p>Overview</p>
+      <h2>be part of the adidas YARN design system</h2>
+    </page-title>
     <div class="row overview__panel-container">
       <div class="col-xs-4">
         <div class="overview__panel-container__title">designer</div>

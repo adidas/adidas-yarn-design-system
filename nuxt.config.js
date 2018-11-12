@@ -37,10 +37,10 @@ module.exports = {
     '~/styles/style.less'
   ],
   plugins: [
-    '~/plugins/global-components.js',
     '~/plugins/i18n.js',
     '~/plugins/markdown.js',
-    '~/plugins/window.js'
+    '~/plugins/window.js',
+    '~/plugins/global-components.js'
   ],
   router: {
     base: _BASE,

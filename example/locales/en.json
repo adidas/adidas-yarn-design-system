@@ -182,7 +182,7 @@
       "name": "Forms"
     },
     "components-form-input": {
-      "name": "Form inputs",
+      "name": "Inputs",
       "sections": {
         "basic": {
           "name": "Basic inputs",
@@ -206,10 +206,13 @@
       }
     },
     "components-form-checkbox": {
-      "name": "Form checkboxes"
+      "name": "Checkboxes"
     },
     "components-form-radio": {
-      "name": "Form radio buttons"
+      "name": "Radio buttons"
+    },
+    "components-form-textarea": {
+      "name": "Textarea"
     },
     "plugins": {
       "name": "Plugins",

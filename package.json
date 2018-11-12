@@ -44,7 +44,7 @@
     "nuxt": "1.4.2",
     "postcss-loader": "2.1.6",
     "raw-loader": "0.5.1",
-    "showdown": "1.8.6",
+    "showdown": "1.9.0",
     "source-map-loader": "0.2.4",
     "stylelint": "9.6.0",
     "stylelint-config-adidas": "1.1.0",
