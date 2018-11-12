@@ -47,7 +47,8 @@
               <input class="control__input" type="radio" name="disabled" disabled="disabled" checked="checked"/>
               <span class="control__indicator yarn-icon yarn-icon--radio"></span>
               <span class="control__label">
-                {{ $t('views.components-form-radio.values.third') }} ({{ $t('common.disabled'), $t('common.selected') }})
+                {{ $t('views.components-form-radio.values.third') }}
+                ({{ $t('common.disabled') }}, {{ $t('common.selected') }})
               </span>
             </label>
           </div>
