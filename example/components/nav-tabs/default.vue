@@ -18,3 +18,9 @@ export default {
   props: [ 'tabs' ]
 };
 </script>
+
+<style lang="less">
+  .nav.nav-pills {
+    margin-bottom: 0;
+  }
+</style>
