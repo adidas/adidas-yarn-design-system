@@ -1,15 +1,14 @@
 <template>
   <div class="container">
     <page-title>
-      <p>{{ section }}</p>
-      <h2>{{ title }}</h2>
+      <slot name="header"></slot>
     </page-title>
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         <markdown-renderer type="url" :src="src"/>
       </div>
     </div>
-    <slot></slot>
+    <slot name="content"></slot>
   </div>
 </template>
 
@@ -17,7 +16,7 @@
 import MarkdownRenderer from '~/components/markdown/renderer';
 
 export default {
-  props: [ 'src', 'title', 'section' ],
+  props: [ 'src' ],
   components: {
     MarkdownRenderer
   }
