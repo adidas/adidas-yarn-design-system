@@ -1,3 +1,34 @@
+# 1.4.0
+
+- Fixed forms and controls.
+- Fixed navigation tabs.
+- Fixed minor style issues and variable values.
+  - Components: articles, buttons, sidebar and tags.
+- Added test tools using `jest`.
+  -  Unit tests for application startup scripts.
+- Added forms component example.
+
+### [ forms ]
+
+- Added `--checkmark` modifier to customize checkboxes.
+- Added `.form-inline` class.
+- Fixed `.form-group`, `.control` classes and their subclasses.
+- Removed `form-control__tag`, `form-control__tags` classes.
+- Improved code of feedback classes using a mixin.
+
+### [ input-groups ]
+
+- Added `.input-group-addon--icon` class.
+
+### [ navs ]
+
+- Fixed navigation tabs and pills style.
+
+### [ example ]
+
+- Added forms component for input, checkbox, radio button and text area.
+- Refactored pages layout using containers.
+
 # 1.3.0
 
 - Added ordered/unordered list style.
