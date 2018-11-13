@@ -7,6 +7,7 @@
 - Added test tools using `jest`.
   -  Unit tests for application startup scripts.
 - Added forms component example.
+- Removed distributed `yarn.js` library because the lack of necessary functionaly.
 
 ### [ forms ]
 
