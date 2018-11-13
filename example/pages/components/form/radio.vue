@@ -1,5 +1,5 @@
 <template>
-  <tabs-container :page="'radio'">
+  <tabs-container page="radio">
     <template slot="header">
       <p>{{ $t('views.components-forms.name') }}</p>
       <h2>{{ $t('views.components-form-radio.name') }}</h2>

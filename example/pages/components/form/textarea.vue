@@ -1,5 +1,5 @@
 <template>
-  <tabs-container :page="'textarea'">
+  <tabs-container page="textarea">
     <template slot="header">
       <p>{{ $t('views.components-forms.name') }}</p>
       <h2>{{ $t('views.components-form-textarea.name') }}</h2>

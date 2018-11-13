@@ -1,5 +1,5 @@
 <template>
-  <tabs-container :page="'input'">
+  <tabs-container page="input">
     <template slot="header">
       <p>{{ $t('views.components-forms.name') }}</p>
       <h2>{{ $t('views.components-form-input.name') }}</h2>

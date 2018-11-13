@@ -193,7 +193,7 @@
           "text": "Text input",
           "readonly": "Readonly input",
           "disabled": "Disabled input",
-          "required": "Requird input value"
+          "required": "Required input value"
         },
         "feedback": {
           "name": "Feedback inputs",

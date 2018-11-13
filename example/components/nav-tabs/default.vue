@@ -1,12 +1,11 @@
 <template>
   <ul class="nav nav-pills">
     <li class="nav-tab"
-        v-for="tab in tabs"
-        :key="tab.id"
-        :class="{ active: tab.active }">
-      <nuxt-link class="nav-link"
-          :to="tab.to">
-        {{ $t(`tabs.${ tab.id }`) }}
+        v-for="{ id, to, active } in tabs"
+        :key="id"
+        :class="{ active: active }">
+      <nuxt-link class="nav-link" :to="to">
+        {{ $t(`tabs.${ id }`) }}
       </nuxt-link>
     </li>
   </ul>

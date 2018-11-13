@@ -1,5 +1,5 @@
 <template>
-  <tabs-container :page="'checkbox'">
+  <tabs-container page="checkbox">
     <template slot="header">
       <p>{{ $t('views.components-forms.name') }}</p>
       <h2>{{ $t('views.components-form-checkbox.name') }}</h2>

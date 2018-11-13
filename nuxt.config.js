@@ -1,8 +1,8 @@
 const path = require('path');
 const url = require('url');
-const { readComponents } = require('./scripts/component-files.js');
-const { readMarkdownFiles } = require('./scripts/markdown-files.js');
-const { readStyleVariables } = require('./scripts/style-files.js');
+const { readComponents } = require('./scripts/component-files');
+const { readMarkdownFiles } = require('./scripts/markdown-files');
+const { readStyleVariables } = require('./scripts/style-files');
 
 const { HOSTNAME = '/_nuxt/', BASE = '' } = process.env;
 const _BASE = BASE ? `/${ path.basename(BASE) }/` : '';
