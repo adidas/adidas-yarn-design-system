@@ -1,0 +1,11 @@
+{
+  "plugins": [ "jest" ],
+  "extends": [
+    "adidas-env/node",
+    "adidas-env/test",
+    "adidas-es9"
+  ],
+  "env": {
+    "jest/globals": true
+  }
+}

@@ -8,8 +8,6 @@ import { getComponents } from './components';
 export function getFormTabs(activeTabId) {
   const formComponents = getComponents('forms');
 
-  console.log('formComponents', formComponents);
-
   return formComponents.map((tab) => ({
     id: tab,
     to: `/components/form/${ tab }`,
