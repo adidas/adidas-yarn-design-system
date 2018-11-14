@@ -1,10 +1,7 @@
 .article {
-  @padding-margin: @padding-large-horizontal * 2;
-  @image-header-height-reply: 3em;
-
   &__section {
     border-bottom: 1px solid @primary-lightgray;
-    padding-top: @padding-margin;
+    padding-top: @padding-large-vertical;
 
     .container-fluid {
       .container-fixed(@custom-gutter);
@@ -85,7 +82,7 @@
             margin-right: 1em;
 
             &--reply {
-              height: @image-header-height-reply;
+              height: 3rem;
             }
           }
 

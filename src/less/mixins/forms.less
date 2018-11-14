@@ -1,0 +1,20 @@
+// Form group feedback style generator
+.has-feedback-generator(@color; @border-color) {
+  .form-control {
+    &__container {
+      border-color: @border-color;
+    }
+
+    &-feedback {
+      color: @color;
+    }
+  }
+
+  .control__label {
+    color: @color;
+  }
+
+  .input-group-addon {
+    border-right-color: @border-color;
+  }
+}

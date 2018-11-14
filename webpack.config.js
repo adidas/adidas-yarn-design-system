@@ -8,16 +8,6 @@ const production = process.env.NODE_ENV === 'production';
 const library = process.env.LIBRARY_NAME || 'yarn';
 const assets = 'assets';
 const entry = {
-  js: {
-    filename: {
-      in: 'index',
-      out: `${ library }`
-    },
-    extension: {
-      in: 'js',
-      out: 'js'
-    }
-  },
   css: {
     filename: {
       in: `${ library }`,
@@ -81,7 +71,7 @@ module.exports = {
     return result;
   }, {}),
   output: {
-    filename: '[name].js',
+    filename: '[name]',
     path: path.resolve(cwd, './dist'),
     library,
     libraryTarget: 'umd'

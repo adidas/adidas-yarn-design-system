@@ -7,12 +7,12 @@ const MARKDOWN_EXT = '.md';
  * Reads the existing markdown files inside a folder and its subfolders and create an object
  * with the same structure as the folder structure which values are the markdown file as string.
  * @param {string} basePath - Folder to start searching.
- * @param {Object} markdown - Object to store the files content.
+ * @returns {Object} markdown - Object with the files content.
  */
-function readFiles(basePath, markdown) {
+function readMarkdownFiles(basePath) {
   const files = fs.readdirSync(basePath);
 
-  files.forEach((file) => {
+  return files.reduce((markdown, file) => {
     const filePath = path.normalize(path.join(basePath, file));
     const stats = fs.statSync(filePath);
 
@@ -21,17 +21,13 @@ function readFiles(basePath, markdown) {
 
       markdown[lang] = fs.readFileSync(filePath, { encoding: 'utf8' }).toString();
     } else if (stats.isDirectory()) {
-      markdown[file] = {};
-
-      readFiles(filePath, markdown[file]);
+      markdown[file] = readMarkdownFiles(filePath);
     }
-  });
+
+    return markdown;
+  }, {});
 }
 
-module.exports = function(basePath) {
-  const markdown = {};
-
-  readFiles(basePath, markdown);
-
-  return markdown;
+module.exports = {
+  readMarkdownFiles
 };

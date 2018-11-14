@@ -1,27 +1,8 @@
 <template>
-  <div class="container">
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-          <p>{{ $t('views.overview.name') }}</p>
-          <h2>{{ $t('views.overview-designer.description') }}</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <markdown-renderer type="url" :src="'overview.designer'"/>
-      </div>
-    </div>
-  </div>
+  <markdown-container :src="'overview.designer'">
+    <template slot="header">
+      <p>{{ $t('views.overview.name') }}</p>
+      <h2>{{ $t('views.overview-designer.description') }}</h2>
+    </template>
+  </markdown-container>
 </template>
-
-<script>
-import markdownRenderer from '~/components/markdown/renderer';
-
-export default {
-  components: {
-    markdownRenderer
-  }
-};
-</script>

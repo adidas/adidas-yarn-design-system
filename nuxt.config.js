@@ -1,7 +1,8 @@
 const path = require('path');
 const url = require('url');
-const readMarkdownFiles = require('./scripts/markdown-files.js');
-const readStyleVariables = require('./scripts/style-files.js');
+const { readComponents } = require('./scripts/component-files');
+const { readMarkdownFiles } = require('./scripts/markdown-files');
+const { readStyleVariables } = require('./scripts/style-files');
 
 const { HOSTNAME = '/_nuxt/', BASE = '' } = process.env;
 const _BASE = BASE ? `/${ path.basename(BASE) }/` : '';
@@ -39,7 +40,8 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/markdown.js',
-    '~/plugins/window.js'
+    '~/plugins/window.js',
+    '~/plugins/global-components.js'
   ],
   router: {
     base: _BASE,
@@ -67,6 +69,9 @@ module.exports = {
   env: {
     markdown: readMarkdownFiles('example/locales'),
     routes: globalRoutes,
+    components: {
+      forms: readComponents('example/pages/components/form')
+    },
     style: {
       variable: readStyleVariables('src/less/variables/variables.less'),
       color: readStyleVariables('src/less/variables/colors.less'),

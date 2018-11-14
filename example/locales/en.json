@@ -17,6 +17,10 @@
     "contact": "contact",
     "imprint": "imprint",
     "button": "button",
+    "checked": "checked",
+    "unchecked": "unchecked",
+    "selected": "selected",
+    "disabled": "disabled",
     "color": "color",
     "colors": {
       "blue": "blue",
@@ -42,7 +46,24 @@
       "middle": "middle",
       "top": "top",
       "bottom": "bottom"
+    },
+    "input": {
+      "text": "Unput text",
+      "text-left": "@:common.input.text (left)",
+      "text-right": "@:common.input.text (right)",
+      "group": "Unput group",
+      "group-left": "@:common.input.group (left)",
+      "group-right": "@:common.input.group (right)"
+    },
+    "form": {
+      "horizontal-input": "Horizontal input"
     }
+  },
+  "tabs": {
+    "input": "Input",
+    "checkbox": "Checkbox",
+    "radio": "Radio button",
+    "textarea": "Textarea"
   },
   "views": {
     "index": {
@@ -160,6 +181,50 @@
         },
         "mobile": "Mobile buttons"
       }
+    },
+    "components-forms": {
+      "name": "Forms"
+    },
+    "components-form-input": {
+      "name": "Inputs",
+      "sections": {
+        "basic": {
+          "name": "Basic inputs",
+          "text": "Text input",
+          "readonly": "Readonly input",
+          "disabled": "Disabled input",
+          "required": "Required input value"
+        },
+        "feedback": {
+          "name": "Feedback inputs",
+          "success": "Success state",
+          "warning": "Warning state",
+          "error": "Error state",
+          "basic": "Basic feedback"
+        },
+        "horizontal": {
+          "name": "Horizontal form"
+        },
+        "inline": {
+          "name": "Inline form"
+        }
+      }
+    },
+    "components-form-checkbox": {
+      "name": "Checkboxes"
+    },
+    "components-form-radio": {
+      "name": "Radio buttons",
+      "values": {
+        "first": "First value",
+        "second": "Second value",
+        "third": "Third value"
+      }
+    },
+    "components-form-textarea": {
+      "name": "Textarea",
+      "label": "Free text area",
+      "label-disabled": "Free text area (disabled)"
     },
     "plugins": {
       "name": "Plugins",

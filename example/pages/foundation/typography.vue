@@ -1,13 +1,9 @@
 <template>
   <div class="container typography">
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-          <p>{{ $t('views.foundation.name') }}</p>
-          <h2>{{ $t('views.foundation-typography.name') }}</h2>
-        </div>
-      </div>
-    </div>
+    <page-title>
+      <p>{{ $t('views.foundation.name') }}</p>
+      <h2>{{ $t('views.foundation-typography.name') }}</h2>
+    </page-title>
     <section class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1">
         <h4 class="title">{{ $t('views.foundation-typography.section.yarn-heading.title') }}</h4>

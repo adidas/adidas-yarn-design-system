@@ -16,6 +16,7 @@
 dist
 docs
 node_modules
+test/results
 
 # Untracked application files and directories:
 .nuxt

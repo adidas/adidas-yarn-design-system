@@ -1,4 +1,4 @@
-&__tags {
+.tags {
   font-size: @font-size-small;
 
   &__result {
@@ -17,10 +17,10 @@
   }
 }
 
-&__tag {
+.tag {
   margin-bottom: @navbar-padding-horizontal;
-  padding: @padding-margin 0 @padding-margin @padding-margin;
-  margin-right: @padding-margin;
+  padding: @padding-base-vertical 0 @padding-base-vertical @padding-base-horizontal;
+  margin-right: @padding-base-horizontal;
   background-color: @primary-white;
   height: 2em;
   .flex(row, center, space-around);
