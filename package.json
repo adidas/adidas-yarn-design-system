@@ -1,7 +1,7 @@
 {
   "name": "@adidas/yarn-design-system",
-  "version": "1.4.0",
-  "description": "adidas Yarn Design System: toolkit for developing with HTML, CSS and JS with adidas design",
+  "version": "1.5.0",
+  "description": "adidas YARN Design System: toolkit for developing with HTML and CSS",
   "repository": {
     "type": "git",
     "url": "https://github.com/adidas/adidas-yarn-design-system.git"
