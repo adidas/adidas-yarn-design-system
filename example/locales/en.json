@@ -230,6 +230,7 @@
       "name": "Tags",
       "horizontal": "Horizontal tag list",
       "vertical": "Vertical tag list",
+      "selected": "Selected tags",
       "removable": "Removable tags"
     },
     "components-tiles": {

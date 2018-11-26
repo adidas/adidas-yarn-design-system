@@ -8,9 +8,9 @@
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <section class="section">
           <div class="row">
-            <h3 class="col-xs-12">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.main-buttons') }}
-            </h3>
+            </h4>
             <div class="col-xs-12 col-sm-6">
               <button-group name="primary" classes="btn-primary"/>
             </div>
@@ -27,9 +27,9 @@
         </section>
         <section class="section">
           <div class="row">
-            <h3 class="col-xs-12">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.colored-buttons') }}
-            </h3>
+            </h4>
             <div class="col-xs-12 col-sm-6">
               <button-group name="blue"/>
               <button-group name="red"/>
@@ -49,9 +49,9 @@
         </section>
         <section class="section">
           <div class="row">
-            <h3 class="col-xs-12">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.sections.icons.name') }}
-            </h3>
+            </h4>
             <div class="col-xs-6 col-sm-3">
               <p>{{ $t('views.components-buttons.sections.icons.primary') }}</p>
               <button class="btn btn-primary">
@@ -81,9 +81,9 @@
         </section>
         <section class="section">
           <div class="row">
-            <h3 class="col-xs-12">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.sections.group.horizontal.name') }}
-            </h3>
+            </h4>
             <div class="col-xs-12">
               <p>{{ $tc('views.components-buttons.count-button-example', 1, { count: 1 }) }}</p>
               <div class="btn-group">
@@ -109,9 +109,9 @@
         </section>
         <section class="section">
           <div class="row">
-            <h3 class="col-xs-12">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.sections.group.vertical.name') }}
-            </h3>
+            </h4>
             <div class="col-xs-12">
               <p>{{ $tc('views.components-buttons.count-button-example', 1, { count: 1 }) }}</p>
               <div class="btn-group-vertical">
@@ -137,9 +137,9 @@
         </section>
         <section class="section">
           <div class="row">
-            <h3 class="col-xs-12">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.sections.mobile') }}
-            </h3>
+            </h4>
             <div class="col-xs-12">
               <p>{{ $tc('views.components-buttons.count-button-example', 1, { count: 1 }) }}</p>
               <div class="btn-group">

@@ -71,5 +71,5 @@ export default {
   components: {
     Tile
   }
-}
+};
 </script>

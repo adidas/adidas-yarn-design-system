@@ -11,8 +11,7 @@
           <span class="tag-list tag-list--horizontal">
             <tag v-for="tag in tags"
                 :key="tag"
-                :label="tag">
-            </tag>
+                :label="tag"/>
           </span>
         </section>
         <section class="section">
@@ -20,8 +19,7 @@
           <span class="tag-list tag-list--vertical">
             <tag v-for="tag in tags"
                 :key="tag"
-                :label="tag">
-            </tag>
+                :label="tag"/>
           </span>
         </section>
         <section class="section">
@@ -30,8 +28,7 @@
             <tag v-for="tag in tags"
                 :key="tag"
                 :label="tag"
-                :selected="true">
-            </tag>
+                :selected="true"/>
           </span>
         </section>
         <section class="section">
@@ -40,8 +37,7 @@
             <tag v-for="tag in tags"
                 :key="tag"
                 :label="tag"
-                :removable="true">
-            </tag>
+                :removable="true"/>
           </span>
         </section>
       </div>
@@ -61,5 +57,5 @@ export default {
   components: {
     Tag
   }
-}
+};
 </script>
