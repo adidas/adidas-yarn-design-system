@@ -232,6 +232,9 @@
       "vertical": "Vertical tag list",
       "removable": "Removable tags"
     },
+    "components-tiles": {
+      "name": "Tiles"
+    },
     "plugins": {
       "name": "Plugins",
       "description": "CSS extensions for @:meta.yarn"
