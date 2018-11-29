@@ -37,7 +37,8 @@
   }
 }
 
-.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color;) when not (@background-color = transparent) {
+.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color;)
+when not (@background-color = transparent) {
   &:active,
   &.active {
     box-shadow: @shadow-outset;
@@ -50,7 +51,8 @@
   }
 }
 
-.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color;) when (@background-color = transparent) {
+.button-generator(@color; @background-color; @disable-color: @color; @active-color: @color;)
+when (@background-color = transparent) {
   &.disabled,
   &:disabled {
     background-color: @background-color;

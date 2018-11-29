@@ -226,6 +226,16 @@
       "label": "Free text area",
       "label-disabled": "Free text area (disabled)"
     },
+    "components-tags": {
+      "name": "Tags",
+      "horizontal": "Horizontal tag list",
+      "vertical": "Vertical tag list",
+      "selected": "Selected tags",
+      "removable": "Removable tags"
+    },
+    "components-tiles": {
+      "name": "Tiles"
+    },
     "plugins": {
       "name": "Plugins",
       "description": "CSS extensions for @:meta.yarn"

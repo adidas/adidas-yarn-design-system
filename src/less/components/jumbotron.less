@@ -92,8 +92,14 @@
       padding: @jumbotron-blur;
 
       &__image {
+        @h-shadow: @jumbotron-horizontal-shadow;
+        @v-shadow: @jumbotron-vertical-shadow;
+        @blur: @jumbotron-blur;
+        @spread: @jumbotron-spread;
+        @opacity: @jumbotron-opacity;
+
         margin: 0 auto;
-        box-shadow: @jumbotron-horizontal-shadow @jumbotron-vertical-shadow @jumbotron-blur @jumbotron-spread fade(@gray-base, @jumbotron-opacity);
+        box-shadow: @h-shadow @v-shadow @blur @spread fade(@gray-base, @opacity);
       }
     }
 

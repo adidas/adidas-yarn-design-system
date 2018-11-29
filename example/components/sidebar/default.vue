@@ -66,8 +66,8 @@ export default {
         const parentRoute = routes.find(({ name }) => name === parentName);
 
         if (parentRoute) {
-          parentRoute.children = parentRoute.children || [];
-          parentRoute.children.push(route);
+          parentRoute.children = [].concat(parentRoute.children || [], route)
+            .sort(({ name1 }, { name2 }) => name1 - name2);
         } else {
           routes.push(route);
         }

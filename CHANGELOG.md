@@ -1,3 +1,30 @@
+# 1.5.0
+
+- Updated tags component.
+- Updated tiles component.
+- Updated example with tags and tiles.
+- Fixed minor issues in components.
+
+### [ tags ]
+
+- Added `.tag-list--horizontal`/`.tag-list--vertical` modifiers.
+- Fixed tag style.
+- Removed `.tags` class in favor of `.tag-list`.
+
+### [ tiles ]
+
+- Updated tile height and footer height values.
+- Updated `.tile__main--flag` adding customization for YARN icons.
+- Removed `.tile__footer` ellipsis and its hover behavior.
+- Removed `.tile__main--app` class.
+- Removed `.tile__footer__status` class and all its subclasses.
+- Removed `.link` class customization inside `.tile__footer__text`.
+
+### [ example ]
+
+- Added tags component example.
+- Added tiles component example.
+
 # 1.4.0
 
 - Fixed forms and controls.
