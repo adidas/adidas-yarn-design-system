@@ -4,16 +4,16 @@
 
 //== Unit-less `line-height` for use in components like buttons.
 @line-height-base: 1.5;
-//** Computed line-height (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+//== Computed line-height (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed: 1.5;
 
-//** rhythm unit
+//== rhythm unit
 @rhythm: .25em;
 
-//** notify square
+//== notify square
 @notify-size: @rhythm * 2;
 
-//** shadows params
+//== shadows params
 @shadow-size: .2em;
 @shadow-horizontal: -@shadow-size;
 @shadow-opacity: 30%;
@@ -23,22 +23,22 @@
 @shadow-row-vertical: 1px;
 @shadow-row-blur: @shadow-size;
 
-//** lateral sidebars params
+//== lateral sidebars params
 @lateral-shadow-vertical: .5em;
 @lateral-shadow-blur: @lateral-shadow-vertical * 2;
 @lateral-width: 26em;
 
-//** lateral sidebars params for mobile
+//== lateral sidebars params for mobile
 @lateral-right-width-mobile: 100%;
 @lateral-left-width-mobile: 80%;
 
-//** gutter used inside main-container
+//== gutter used inside main-container
 @custom-gutter: .75rem * 2;
 
-//** gutter used inside mobile main-container
+//== gutter used inside mobile main-container
 @custom-gutter-mobile: 1.75rem;
 
-//** Sidebar options
+//== Sidebar options
 @transition-speed: .6s;
 @sidebar-width: 16em;
 @sidebar-width-mobile: 90%;
@@ -65,20 +65,20 @@
 //
 //## Settings for some of the most global styles.
 
-//** Background color for `<body>`.
+//== Background color for `<body>`.
 @body-bg: @primary-white;
 
-//** Global text color on `<body>`.
+//== Global text color on `<body>`.
 @text-color: @primary-black;
 
-//** Global textual link color.
+//== Global textual link color.
 @link-color: @brand-primary;
-//** Link hover color set via `darken()` function.
+//== Link hover color set via `darken()` function.
 @link-hover-color: darken(@link-color, 15%);
-//** Link hover decoration.
+//== Link hover decoration.
 @link-hover-decoration: none;
 
-//** By default, this inherits from the `<body>`.
+//== By default, this inherits from the `<body>`.
 @headings-font-family: inherit;
 @headings-font-weight: 700;
 @headings-line-height: 1;
@@ -110,19 +110,19 @@
 //
 //
 @component-active-color: @primary-white;
-//** Global background color for active items (e.g., navs or dropdowns).
+//== Global background color for active items (e.g., navs or dropdowns).
 @component-active-bg: @brand-primary;
 
-//** Width of the `border` for generating carets that indicate dropdowns.
+//== Width of the `border` for generating carets that indicate dropdowns.
 @caret-width-base: .25em;
-//** Carets increase slightly in size for larger components.
+//== Carets increase slightly in size for larger components.
 @caret-width-large: .25em;
 
 //== Tables
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
-//** Padding for `<th>`s and `<td>`s.
+//== Padding for `<th>`s and `<td>`s.
 @table-cell-border-size: 1px;
 @table-cell-padding: @rhythm;
 @table-cell-checkbox-size: 1em;
@@ -130,23 +130,23 @@
 @table-cell-image-width: calc(2em - (@table-cell-border-size * 2));
 @table-cell-border: @table-cell-border-size solid @primary-silver;
 @table-cell-border-select: @table-cell-border-size solid @blue-100;
-//** Padding for cells in `.table-condensed`.
+//== Padding for cells in `.table-condensed`.
 @table-condensed-cell-padding: .25em;
 
-//** Default background color used for all tables.
+//== Default background color used for all tables.
 @table-bg: transparent;
-//** Background color used for `.table-striped`.
+//== Background color used for `.table-striped`.
 @table-bg-accent: @primary-lightgray;
-//** Background color used for `.table-hover`.
+//== Background color used for `.table-hover`.
 @table-bg-hover: @primary-lightgray;
 @table-bg-active: @table-bg-hover;
 
-//** Border color for table and cell borders.
+//== Border color for table and cell borders.
 @table-border-color: @primary-lightgray;
 
 //== Buttons
 //
-//## For each of Bootstrap's buttons, define text, background and border color.
+//## For each of Bootstrap buttons, define text, background and border color.
 
 @btn-size-height: 2.5rem;
 @btn-font-weight: 400;
@@ -186,96 +186,96 @@
 //
 //##
 
-//** `<input>` background color
+//== `<input>` background color
 @input-bg: @primary-white;
-//** `<input disabled>` background color
+//== `<input disabled>` background color
 @input-bg-disabled: @gray-lighter;
 
-//** Text color for `<input>`s
+//== Text color for `<input>`s
 @input-color: @primary-nickel;
-//** `<input>` border color
+//== `<input>` border color
 @input-border: @primary-silver;
 
-//** Default `.form-control` border radius
+//== Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
 @input-border-radius: @border-radius-base;
-//** Large `.form-control` border radius
+//== Large `.form-control` border radius
 @input-border-radius-large: @border-radius-large;
-//** Small `.form-control` border radius
+//== Small `.form-control` border radius
 @input-border-radius-small: @border-radius-small;
 
-//** Border color for inputs on focus
+//== Border color for inputs on focus
 @input-border-focus: @blue-100;
 
-//** Placeholder text color
+//== Placeholder text color
 @input-color-placeholder: @primary-gray;
 
-//** Default `.form-control` height
+//== Default `.form-control` height
 @input-height-base: 2rem;
-//** Large `.form-control` height
+//== Large `.form-control` height
 @input-height-large: 2.5rem;
-//** Small `.form-control` height
+//== Small `.form-control` height
 @input-height-small: 1.75rem;
 
-//** Width of the input with feedback
+//== Width of the input with feedback
 @input-width-feedback: calc(100% ~'-' (@input-height-base * 1.25));
 
-//** `.form-group` margin
+//== `.form-group` margin
 @form-group-margin-bottom: @rhythm * 2;
 
 @legend-color: @gray-dark;
 @legend-border-color: @primary-gray;
 
-//** Background color for textual input addons
+//== Background color for textual input addons
 @input-group-addon-bg: @gray-lighter;
-//** Border color for textual input addons
+//== Border color for textual input addons
 @input-group-addon-border-color: @input-border;
-//** Size of the feedback and addon icons
+//== Size of the feedback and addon icons
 @input-group-font-size: @font-size-small;
 @input-group-icon-font-size: @icon-font-size;
-//** Padding of the addon element
+//== Padding of the addon element
 @input-group-addon-padding: @padding-base-horizontal;
 
-//** Disabled cursor for form controls and buttons.
+//== Disabled cursor for form controls and buttons.
 @cursor-disabled: default;
 
 //== Dropdowns
 //
 //## Dropdown menu container and contents.
 
-//** Background for the dropdown menu.
+//== Background for the dropdown menu.
 @dropdown-bg: @primary-white;
-//** Dropdown menu `border-color`.
+//== Dropdown menu `border-color`.
 @dropdown-border: fade(@primary-black, 15%);
-//** Dropdown menu `border-color` **for IE8**.
+//== Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border: @primary-silver;
-//** Divider color for between dropdown items.
+//== Divider color for between dropdown items.
 @dropdown-divider-bg: @primary-gray;
 
-//** Dropdown link text color.
+//== Dropdown link text color.
 @dropdown-link-color: @gray-dark;
-//** Hover color for dropdown links.
+//== Hover color for dropdown links.
 @dropdown-link-hover-color: darken(@gray-dark, 5%);
-//** Hover background for dropdown links.
+//== Hover background for dropdown links.
 @dropdown-link-hover-bg: @primary-gray;
 
-//** Active dropdown menu item text color.
+//== Active dropdown menu item text color.
 @dropdown-link-active-color: @component-active-color;
-//** Active dropdown menu item background color.
+//== Active dropdown menu item background color.
 @dropdown-link-active-bg: @component-active-bg;
 
-//** Disabled dropdown menu item background color.
+//== Disabled dropdown menu item background color.
 @dropdown-link-disabled-color: @gray-light;
 
-//** Text color for headers within dropdown menus.
+//== Text color for headers within dropdown menus.
 @dropdown-header-color: @gray-light;
 
-//** Deprecated `@dropdown-caret-color` as of v3.1.0
+//== Deprecated `@dropdown-caret-color` as of v3.1.0
 @dropdown-caret-color: @primary-black;
 
 //-- Z-index master list
 //
-// Warning: Avoid customizing these values. They're used for a bird's eye view
+// Warning: Avoid customizing these values. They are used for a bird eye view
 // of components dependent on the z-axis and are designed to all work together.
 //
 // Note: These variables are not generated into the Customizer.
@@ -313,7 +313,7 @@
 @screen-lg-min: @screen-lg;
 @screen-lg-desktop: @screen-lg-min;
 
-// So media queries don't overlap when required, provide a maximum
+// So media queries do not overlap when required, provide a maximum
 @screen-xs-max: @screen-sm-min;
 @screen-sm-max: @screen-md-min;
 @screen-md-max: @screen-lg-min;
@@ -322,16 +322,16 @@
 //
 //## Define your custom responsive grid.
 
-//** Number of columns in the grid.
+//== Number of columns in the grid.
 @grid-columns: 12;
-//** Padding between columns. Gets divided in half for the left and right.
+//== Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width: 2rem;
 // Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
+//== Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint: @screen-sm-min;
-//** Point at which the navbar begins collapsing.
+//== Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
-//** Max width of a fluid grid.
+//== Max width of a fluid grid.
 @grid-max-width: 100rem + @custom-gutter;
 
 //== Container sizes
@@ -340,17 +340,17 @@
 
 // Small screen / tablet
 @container-tablet: (@screen-xs + @grid-gutter-width);
-//** For `@screen-sm-min` and up.
+//== For `@screen-sm-min` and up.
 @container-sm: @container-tablet;
 
 // Medium screen / desktop
 @container-desktop: (@screen-sm + @grid-gutter-width);
-//** For `@screen-md-min` and up.
+//== For `@screen-md-min` and up.
 @container-md: @container-desktop;
 
 // Large screen / wide desktop
 @container-large-desktop: (@screen-md + @grid-gutter-width);
-//** For `@screen-lg-min` and up.
+//== For `@screen-lg-min` and up.
 @container-lg: @container-large-desktop;
 
 //== Navbar
@@ -511,96 +511,96 @@
 //
 //##
 
-//** Tooltip max width
+//== Tooltip max width
 @tooltip-max-width: 12em;
-//** Tooltip text color
+//== Tooltip text color
 @tooltip-color: @primary-white;
-//** Tooltip background color
+//== Tooltip background color
 @tooltip-bg: @primary-black;
 @tooltip-opacity: .9;
 
-//** Tooltip arrow width
+//== Tooltip arrow width
 @tooltip-arrow-width: .25em;
-//** Tooltip arrow color
+//== Tooltip arrow color
 @tooltip-arrow-color: @tooltip-bg;
 
 //== Popovers
 //
 //##
 
-//** Popover body background color
+//== Popover body background color
 @popover-bg: @primary-white;
-//** Popover maximum width
+//== Popover maximum width
 @popover-max-width: 16em;
-//** Popover border color
+//== Popover border color
 @popover-border-color: @primary-nickel;
-//** Popover fallback border color
+//== Popover fallback border color
 @popover-fallback-border-color: @primary-silver;
 
-//** Popover title background color
+//== Popover title background color
 @popover-title-bg: darken(@popover-bg, 5%);
 
-//** Popover arrow width
+//== Popover arrow width
 @popover-arrow-width: .5em;
-//** Popover arrow color
+//== Popover arrow color
 @popover-arrow-color: @popover-bg;
 
-//** Popover outer arrow width
+//== Popover outer arrow width
 @popover-arrow-outer-width: (@popover-arrow-width + 1);
-//** Popover outer arrow color
+//== Popover outer arrow color
 @popover-arrow-outer-color: darken(@popover-border-color, 5%);
 
-//** Popover outer arrow fallback color
+//== Popover outer arrow fallback color
 @popover-arrow-outer-fallback-color: darken(@popover-fallback-border-color, 20%);
 
 //== Labels
 //
 //##
 
-//** Default label background color
+//== Default label background color
 @label-default-bg: @gray-light;
-//** Primary label background color
+//== Primary label background color
 @label-primary-bg: @brand-primary;
-//** Success label background color
+//== Success label background color
 @label-success-bg: @brand-success;
-//** Info label background color
+//== Info label background color
 @label-info-bg: @brand-info;
-//** Warning label background color
+//== Warning label background color
 @label-warning-bg: @brand-warning;
-//** Danger label background color
+//== Danger label background color
 @label-danger-bg: @brand-danger;
 
-//** Default label text color
+//== Default label text color
 @label-color: inherit;
-//** Default text color of a linked label
+//== Default text color of a linked label
 @label-link-hover-color: inherit;
 
 //== Modals
 //
 //##
 
-//** Padding applied to the modal body
+//== Padding applied to the modal body
 @modal-inner-padding: @rhythm * 2;
 
-//** Padding applied to the modal title
+//== Padding applied to the modal title
 @modal-title-padding: @rhythm * 2;
-//** Modal title line-height
+//== Modal title line-height
 @modal-title-line-height: @line-height-base;
 
-//** Background color of modal content area
+//== Background color of modal content area
 @modal-content-bg: @primary-white;
-//** Modal content border color
+//== Modal content border color
 @modal-content-border-color: fade(@primary-black, 20%);
-//** Modal content border color **for IE8**
+//== Modal content border color **for IE8**
 @modal-content-fallback-border-color: @primary-darkgray;
 
-//** Modal backdrop background color
+//== Modal backdrop background color
 @modal-backdrop-bg: @primary-black;
-//** Modal backdrop opacity
+//== Modal backdrop opacity
 @modal-backdrop-opacity: .5;
-//** Modal header border color
+//== Modal header border color
 @modal-header-border-color: @primary-gray;
-//** Modal footer border color
+//== Modal footer border color
 @modal-footer-border-color: @modal-header-border-color;
 
 @modal-lg: 900px;
@@ -639,51 +639,51 @@
 //
 //##
 
-//** Background color of the whole progress component
+//== Background color of the whole progress component
 @progress-bg: @primary-lightgray;
-//** Progress bar text color
+//== Progress bar text color
 @progress-bar-color: @primary-white;
-//** Variable for setting rounded corners on progress bar.
+//== Variable for setting rounded corners on progress bar.
 @progress-border-radius: @border-radius-base;
 
-//** Default progress bar color
+//== Default progress bar color
 @progress-bar-bg: @brand-primary;
-//** Success progress bar color
+//== Success progress bar color
 @progress-bar-success-bg: @brand-success;
-//** Warning progress bar color
+//== Warning progress bar color
 @progress-bar-warning-bg: @brand-warning;
-//** Danger progress bar color
+//== Danger progress bar color
 @progress-bar-danger-bg: @brand-danger;
-//** Info progress bar color
+//== Info progress bar color
 @progress-bar-info-bg: @brand-info;
 
 //== List group
 //
 //##
 
-//** Background color on `.list-group-item`
+//== Background color on `.list-group-item`
 @list-group-bg: transparent;
-//** `.list-group-item` border color
+//== `.list-group-item` border color
 @list-group-border: none;
-//** List group border radius
+//== List group border radius
 @list-group-border-radius: 0;
 
-//** Background color of single list items on hover
+//== Background color of single list items on hover
 @list-group-hover-bg: @primary-white;
-//** Text color of active list items
+//== Text color of active list items
 @list-group-active-color: @dark-blue-100;
-//** Background color of active list items
+//== Background color of active list items
 @list-group-active-bg: inherit;
-//** Border color of active list elements
+//== Border color of active list elements
 @list-group-active-border: @list-group-active-bg;
-//** Text color for content within active list items
+//== Text color for content within active list items
 @list-group-active-text-color: @list-group-active-bg;
 
-//** Text color of disabled list items
+//== Text color of disabled list items
 @list-group-disabled-color: @primary-gray;
-//** Background color of disabled list items
+//== Background color of disabled list items
 @list-group-disabled-bg: inherit;
-//** Text color for content within disabled list items
+//== Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 @list-group-disabled-color-dark: @primary-darkgray;
 @list-group-disabled-color-light: @primary-silver;
@@ -703,7 +703,7 @@
 @panel-footer-padding: @panel-heading-padding;
 @panel-border-radius: @border-radius-base;
 
-//** Border color for elements within panels
+//== Border color for elements within panels
 @panel-inner-border: @primary-gray;
 @panel-footer-bg: @primary-lightgray;
 
@@ -735,18 +735,18 @@
 //
 //##
 
-//** Padding around the thumbnail image
+//== Padding around the thumbnail image
 @thumbnail-padding: .25em;
-//** Thumbnail background color
+//== Thumbnail background color
 @thumbnail-bg: @body-bg;
-//** Thumbnail border color
+//== Thumbnail border color
 @thumbnail-border: @primary-lightgray;
-//** Thumbnail border radius
+//== Thumbnail border radius
 @thumbnail-border-radius: @border-radius-base;
 
-//** Custom text color for thumbnail captions
+//== Custom text color for thumbnail captions
 @thumbnail-caption-color: @text-color;
-//** Padding around the thumbnail caption
+//== Padding around the thumbnail caption
 @thumbnail-caption-padding: .5em;
 
 //== Wells
@@ -761,13 +761,13 @@
 //##
 
 @badge-color: @primary-white;
-//** Linked badge text color on hover
+//== Linked badge text color on hover
 @badge-link-hover-color: @primary-white;
 @badge-bg: @gray-light;
 
-//** Badge text color in active nav link
+//== Badge text color in active nav link
 @badge-active-color: @link-color;
-//** Badge background color in active nav link
+//== Badge background color in active nav link
 @badge-active-bg: @primary-white;
 
 @badge-font-weight: 700;
@@ -780,13 +780,13 @@
 
 @breadcrumb-padding-vertical: 0;
 @breadcrumb-padding-horizontal: .5em;
-//** Breadcrumb background color
+//== Breadcrumb background color
 @breadcrumb-bg: @primary-white;
-//** Breadcrumb text color
+//== Breadcrumb text color
 @breadcrumb-color: @primary-nickel;
-//** Text color of current page in the breadcrumb
+//== Text color of current page in the breadcrumb
 @breadcrumb-active-color: @gray-light;
-//** Textual separator for between breadcrumb elements
+//== Textual separator for between breadcrumb elements
 @breadcrumb-separator: '';
 
 //== Carousel
