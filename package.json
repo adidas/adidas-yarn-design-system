@@ -13,6 +13,7 @@
   ],
   "homepage": "http://adidas.github.io/adidas-yarn-design-system/",
   "devDependencies": {
+    "ajv": "6.5.3",
     "autoprefixer": "8.6.5",
     "babel-core": "6.26.3",
     "babel-eslint": "10.0.1",
