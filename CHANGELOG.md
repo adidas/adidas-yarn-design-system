@@ -3,6 +3,7 @@
 - Updated tags component.
 - Updated tiles component.
 - Updated example with tags and tiles.
+- Fixed minor issues in components.
 
 ### [ tags ]
 
