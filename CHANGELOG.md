@@ -1,3 +1,5 @@
+- Changed Travis configuration to publish on tags instead of on `master` branch.
+
 # 1.5.0
 
 - Updated tags component.
