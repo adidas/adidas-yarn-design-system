@@ -1,3 +1,7 @@
+## 1.5.1
+
+- Fixed build script to run smoothly on Windows.
+
 # 1.5.0
 
 - Updated tags component.
