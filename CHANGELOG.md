@@ -1,5 +1,3 @@
-## 1.5.1
-
 - Fixed build script to run smoothly on Windows.
 - Changed Travis configuration to publish on tags instead of on `master` branch.
 
