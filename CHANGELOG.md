@@ -1,7 +1,16 @@
+## 1.5.1
+
+- Fixed padding and margin in checkbox and radio.
 - Fixed build script to run smoothly on Windows.
-- Removed extra `div` in checkmark example.
-- Removed left margin and padding for `.control--checkbox` and `.control--radio` classes.
 - Changed TravisCI configuration to publish on tags instead of on `master` branch.
+
+### [ forms ]
+
+- Removed left margin and padding for `.control--checkbox` and `.control--radio` classes.
+
+### [ example ]
+
+- Removed extra `div` in checkmark example.
 
 # 1.5.0
 
