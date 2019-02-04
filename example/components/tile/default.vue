@@ -20,10 +20,10 @@
 <script>
 export default {
   props: {
-    title: '',
-    image: '',
-    type: '',
-    flag: ''
+    title: String,
+    image: String,
+    type: String,
+    flag: String
   }
 };
 </script>
