@@ -1,7 +1,7 @@
 - Fixed build script to run smoothly on Windows.
-- Removed extra div in checkmark example.
-- Removed left marging and padding for checkbox/radio inside a panel.
-- Changed Travis configuration to publish on tags instead of on `master` branch.
+- Removed extra `div` in checkmark example.
+- Removed left margin and padding for `.control--checkbox` and `.control--radio` classes.
+- Changed TravisCI configuration to publish on tags instead of on `master` branch.
 
 # 1.5.0
 

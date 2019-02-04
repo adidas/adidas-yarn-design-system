@@ -9,7 +9,6 @@
 @feedback-margin: @form-control-margin;
 @type-offset: @form-control-margin;
 @label-bottom-margin: @padding-base-vertical;
-@label-margin-left: @padding-large-horizontal;
 @input-near-padding: @padding-small-horizontal;
 @required-star-margin: @form-control-margin;
 @checkbox-tile-size: 3rem;
@@ -204,8 +203,9 @@
 
   &--checkbox,
   &--radio {
+    padding-left: 0;
+    margin-left: 0;
     margin-bottom: @label-bottom-margin;
-    margin-left: @label-margin-left;
 
     .control__label {
       margin-left: @type-offset;
@@ -378,16 +378,6 @@
       .input-group-addon {
         line-height: 2.25;
       }
-    }
-  }
-}
-
-.panel {
-  .control {
-    &--checkbox,
-    &--radio {
-      margin-left: 0;
-      padding-left: 0;
     }
   }
 }
