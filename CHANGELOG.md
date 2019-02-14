@@ -1,3 +1,11 @@
+## 1.5.2
+
+- Fixed button sizes.
+
+### [ buttons ]
+
+- Fixed `.btn-lg`, `.btn-sm` and `.btn-xs` style.
+
 ## 1.5.1
 
 - Fixed padding and margin in checkbox and radio.
