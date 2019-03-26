@@ -17,7 +17,7 @@
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
             <ul class="list-group list-group--vertical" slot="tabContent">
-              <li class="list-group-item list-group-item-light"
+              <li class="list-group-item"
                   v-for="subroute in route.children"
                   :key="subroute.name">
                 <nuxt-link class="link label"

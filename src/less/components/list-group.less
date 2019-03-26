@@ -9,8 +9,16 @@
     .flex(row, center);
 
     .list-group-item {
-      padding: 0 @padding-large-horizontal;
+      margin-left: (@padding-large-horizontal * 2);
       .flex(row, center);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -26,43 +34,25 @@
     border: @list-group-border;
     margin: 0;
     padding: @padding-xs-vertical 0;
+    .list-group-generator(@primary-darkgray, @blue-100, @list-group-disabled-color);
 
     &-heading {
-      margin-bottom: .25em;
+      margin-bottom: @padding-small-vertical;
     }
 
-    &.disabled {
-      color: @list-group-disabled-color-light;
-      cursor: @cursor-disabled;
-    }
+    .yarn-icon {
+      padding: 0;
+      margin: 0 @padding-small-horizontal;
+      position: relative;
+      top: @padding-xs-vertical;
 
-    &.disabled:hover {
-      @media @pointer-query {
-        background-color: inherit;
-        border-color: inherit;
-        color: inherit;
-
-        .list-group-item-heading {
-          color: inherit;
-        }
-
-        .list-group-item-text {
-          color: @list-group-disabled-color;
-        }
+      &:first-child {
+        margin-left: 0;
       }
-    }
 
-    &.active:hover {
-      @media @pointer-query {
-        border-color: inherit;
-        color: inherit;
-        z-index: 2;
+      &:last-child {
+        margin-right: 0;
       }
-    }
-
-    .yarn-icon + .label {
-      padding: 0 0 0 floor(@padding-base-horizontal / 2);
-      border-radius: 0;
     }
 
     .list-group {
@@ -70,94 +60,30 @@
       padding: @padding-small-vertical 0 0 @padding-large-horizontal;
     }
 
-    &.active {
-      color: @blue-100;
-    }
-
     &--dark {
-      color: @primary-gray;
-
-      &.active {
-        color: @primary-white;
-      }
-
-      &:hover {
-        @media @pointer-query {
-          color: @primary-white;
-        }
-      }
-
-      &.disabled {
-        color: @list-group-disabled-color-dark;
-        cursor: @cursor-disabled;
-      }
-
-      &.disabled:hover {
-        @media @pointer-query {
-          color: @list-group-disabled-color-dark;
-          cursor: @cursor-disabled;
-        }
-      }
+      .list-group-generator(@primary-gray, @primary-white, @list-group-disabled-color-dark);
     }
 
     &--light {
-      color: @primary-darkgray;
-
-      &.active {
-        color: @blue-100;
-      }
-
-      &:hover {
-        @media @pointer-query {
-          color: @blue-100;
-        }
-      }
-
-      &.disabled {
-        color: @list-group-disabled-color-light;
-        cursor: @cursor-disabled;
-      }
-
-      &.disabled:hover {
-        @media @pointer-query {
-          color: @list-group-disabled-color-light;
-          cursor: @cursor-disabled;
-        }
-      }
+      .list-group-generator(@primary-darkgray, @blue-100, @list-group-disabled-color-light);
     }
 
     &--highlight {
-      padding: @padding-base-vertical @padding-base-horizontal;
-      .flex(row, center, space-between);
+      padding: 0 @padding-base-horizontal;
+      .list-group-generator(@primary-darkgray, @primary-nickel, @list-group-disabled-color-highlight);
 
       &:hover {
         @media @pointer-query {
           background-color: @primary-lightgray;
-          color: @primary-nickel;
         }
       }
 
       &.active {
         background-color: @primary-lightgray;
-        color: @primary-nickel;
 
         &:hover,
         &:focus {
           background-color: @primary-lightgray;
-        }
-      }
-
-      &.disabled {
-        background-color: inherit;
-        color: @list-group-disabled-color-highlight;
-        cursor: @cursor-disabled;
-      }
-
-      &.disabled:hover {
-        @media @pointer-query {
-          background-color: inherit;
-          color: @list-group-disabled-color-highlight;
-          cursor: @cursor-disabled;
         }
       }
     }

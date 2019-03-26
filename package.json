@@ -1,6 +1,6 @@
 {
   "name": "@adidas/yarn-design-system",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "adidas YARN Design System: toolkit for developing with HTML and CSS",
   "repository": {
     "type": "git",
@@ -26,12 +26,12 @@
     "cross-env": "5.2.0",
     "css-loader": "0.28.11",
     "del-cli": "0.2.1",
-    "eslint": "5.13.0",
+    "eslint": "5.15.3",
     "eslint-config-adidas-babel": "1.1.0",
     "eslint-config-adidas-env": "1.1.0",
     "eslint-config-adidas-es9": "1.1.0",
     "eslint-config-adidas-vue": "1.2.0",
-    "eslint-plugin-import": "2.15.0",
+    "eslint-plugin-import": "2.16.0",
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-vue": "5.1.0",
     "extract-loader": "2.0.1",
