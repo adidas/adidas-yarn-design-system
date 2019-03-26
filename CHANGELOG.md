@@ -1,3 +1,19 @@
+## 1.5.3
+
+- Fixed list group classes.
+  - States: `default`, `active`, `disabled`.
+  - Themes: `default`, `dark`, `light`, `highlight`.
+
+### [ list-group]
+
+- Fixed the style to display the state of the item.
+- Added a mixin to generate a theme.
+
+### [ example ]
+
+- Added list group component page showing the list groups with the different themes and states.
+- Updated buttons page adding a section with different sizes.
+
 ## 1.5.2
 
 - Fixed button sizes.
