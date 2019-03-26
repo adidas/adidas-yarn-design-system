@@ -5,10 +5,10 @@
       {{ $t(`common.colors.${ name }`) }}
     </h5>
     <button :class="`btn ${ _classes }`">
-      <span>{{ $t('views.components-buttons.state.active') }}</span>
+      {{ $t('common.state.active') }}
     </button>
     <button :class="`btn ${ _classes } disabled`">
-      {{ $t('views.components-buttons.state.inactive') }}
+      {{ $t('common.state.inactive') }}
     </button>
   </div>
 </template>

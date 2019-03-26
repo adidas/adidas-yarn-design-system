@@ -47,6 +47,10 @@
       "top": "top",
       "bottom": "bottom"
     },
+    "direction": {
+      "vertical": "Vertical",
+      "horizontal": "Horizontal"
+    },
     "input": {
       "text": "Unput text",
       "text-left": "@:common.input.text (left)",
@@ -57,6 +61,18 @@
     },
     "form": {
       "horizontal-input": "Horizontal input"
+    },
+    "state": {
+      "default": "Default",
+      "active": "Active",
+      "inactive": "Inactive",
+      "disabled": "Disabled"
+    },
+    "theme": {
+      "default": "Default",
+      "dark": "Dark",
+      "light": "Light",
+      "highlight": "Highlight"
     }
   },
   "tabs": {
@@ -171,6 +187,13 @@
           "link": "link appearance",
           "secondary": "@:common.colors.secondary"
         },
+        "size": {
+          "name": "Button sizes (with icons)",
+          "default": "Default",
+          "large": "Large",
+          "medium": "Medium",
+          "small": "Small"
+        },
         "group": {
           "horizontal": {
             "name": "Button group horizontal"
@@ -225,6 +248,14 @@
       "name": "Textarea",
       "label": "Free text area",
       "label-disabled": "Free text area (disabled)"
+    },
+    "components-listgroups": {
+      "name": "List groups",
+      "type": {
+        "default": "Default state",
+        "default-icon": "Default state (with icon)",
+        "themes": "Themes"
+      }
     },
     "components-tags": {
       "name": "Tags",

@@ -82,6 +82,37 @@
         <section class="section">
           <div class="row">
             <h4 class="col-xs-12">
+              {{ $t('views.components-buttons.sections.size.name') }}
+            </h4>
+            <div class="col-xs-6 col-sm-3">
+              <p>{{ $t('views.components-buttons.sections.size.default') }}</p>
+              <button class="btn btn--pink btn-option">
+                <span class="yarn-icon yarn-icon--add-to-basket"></span>
+              </button>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <p>{{ $t('views.components-buttons.sections.size.large') }}</p>
+              <button class="btn btn--red btn-lg btn-option">
+                <span class="yarn-icon yarn-icon--add-to-basket"></span>
+              </button>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <p>{{ $t('views.components-buttons.sections.size.medium') }}</p>
+              <button class="btn btn--yellow btn-sm btn-option">
+                <span class="yarn-icon yarn-icon--add-to-basket"></span>
+              </button>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <p>{{ $t('views.components-buttons.sections.size.small') }}</p>
+              <button class="btn btn--orange btn-xs btn-option">
+                <span class="yarn-icon yarn-icon--add-to-basket"></span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="row">
+            <h4 class="col-xs-12">
               {{ $t('views.components-buttons.sections.group.horizontal.name') }}
             </h4>
             <div class="col-xs-12">

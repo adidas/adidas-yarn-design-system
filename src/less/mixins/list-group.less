@@ -1,0 +1,50 @@
+.link-generator(@color, @hover-color: @color, @cursor: @cursor-disabled) {
+  .link {
+    color: @color;
+    cursor: @cursor;
+
+    &:hover {
+      @media @pointer-query {
+        color: @hover-color;
+      }
+    }
+  }
+}
+
+.active-class-generator(@color) {
+  .active,
+  &.active {
+    color: @color;
+    cursor: @cursor-disabled;
+    .link-generator(@color, @color, @cursor-disabled);
+  }
+
+  &:hover {
+    @media @pointer-query {
+      color: @color;
+    }
+  }
+}
+
+.disabled-class-generator(@color) {
+  &.disabled {
+    color: @color;
+    cursor: @cursor-disabled;
+    .link-generator(@color, @color, @cursor-disabled);
+
+    &:hover {
+      @media @pointer-query {
+        color: @color;
+        cursor: @cursor-disabled;
+      }
+    }
+  }
+}
+
+.list-group-generator(@color, @active-color, @disabled-color) {
+  color: @color;
+
+  .link-generator(@color, @active-color, pointer);
+  .active-class-generator(@active-color);
+  .disabled-class-generator(@disabled-color);
+}

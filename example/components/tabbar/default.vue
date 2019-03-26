@@ -1,7 +1,7 @@
 <template>
   <div class="tabbar">
     <ul class="list-group list-group--horizontal">
-      <li class="list-group-item list-group-item-light" v-for="route in routes" :key="route.name">
+      <li class="list-group-item" v-for="route in routes" :key="route.name">
         <nuxt-link class="link text-uppercase" :to="{ name: route.name }" active-class="active">
           {{ $t(`views.${route.name}.name`) }}
         </nuxt-link>
