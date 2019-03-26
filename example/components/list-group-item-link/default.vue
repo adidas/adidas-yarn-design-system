@@ -1,11 +1,9 @@
 <template>
-  <div :class="[ 'list-group-item', themeClass, stateClass ]">
+  <div :class="[ 'list-group-item', themeClass, state ]">
     <a class="link" href="#">
-      <span v-if="iconLeft" :class="[ 'yarn-icon', `yarn-icon--${ icon }` ]">
-      </span>
+      <span v-if="iconLeft" :class="[ 'yarn-icon', `yarn-icon--${ icon }` ]"></span>
       <span class="label">{{ $t(label) }}</span>
-      <span v-if="iconRight" :class="[ 'yarn-icon', `yarn-icon--${ icon }` ]">
-      </span>
+      <span v-if="iconRight" :class="[ 'yarn-icon', `yarn-icon--${ icon }` ]"></span>
     </a>
   </div>
 </template>
@@ -17,14 +15,11 @@ export default {
     themeClass() {
       return this.theme ? `list-group-item--${ this.theme }` : '';
     },
-    stateClass() {
-      return this.state || '';
-    },
     iconLeft() {
-      return !!this.icon || this.icon === 'left';
+      return !this.position || this.position === 'left';
     },
     iconRight() {
-      return this.icon === 'right';
+      return this.position === 'right';
     }
   }
 };

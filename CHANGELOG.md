@@ -4,7 +4,7 @@
   - States: `default`, `active`, `disabled`.
   - Themes: `default`, `dark`, `light`, `highlight`.
 
-### [ list-group]
+### [ list-group ]
 
 - Fixed the style to display the state of the item.
 - Added a mixin to generate a theme.
