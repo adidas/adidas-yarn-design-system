@@ -30,6 +30,24 @@
     color: @active-color;
     box-shadow: @shadow-outset;
     cursor: default;
+
+    &:hover {
+      @media @pointer-query {
+        background-color: @background-color;
+      }
+    }
+  }
+
+  &:focus,
+  &.focus {
+    background-color: @background-color;
+    color: @color;
+
+    &:hover {
+      @media @pointer-query {
+        background-color: @background-color;
+      }
+    }
   }
 
   &:hover {
@@ -57,7 +75,9 @@ when (@background-color = transparent) {
 
 .disable-button-box-shadow() {
   &:active,
-  &.active {
+  &.active,
+  &:focus,
+  &.focus {
     box-shadow: none;
   }
 
