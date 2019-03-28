@@ -65,7 +65,7 @@
     .button-generator(@primary-darkgray; transparent; @primary-gray; @blue-100);
 
     &-dark {
-      .button-generator(@primary-gray; transparent; @primary-darkgray; @blue-100);
+      .button-generator(@primary-gray; transparent; @primary-darkgray; @primary-white);
     }
   }
 
@@ -73,6 +73,9 @@
   // -------------------------
   // Make a button look and behave like a link
   &-link {
+    .button-generator(@primary-darkgray; transparent; @primary-gray; @blue-100);
+    .disable-button-box-shadow();
+
     &:focus {
       text-decoration: @link-hover-decoration;
     }

@@ -52,28 +52,54 @@
             <h4 class="col-xs-12">
               {{ $t('views.components-buttons.sections.icons.name') }}
             </h4>
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-12 col-sm-6">
               <p>{{ $t('views.components-buttons.sections.icons.primary') }}</p>
+              <button class="btn btn-primary active">
+                <span class="yarn-icon yarn-icon--apparel"></span>
+              </button>
               <button class="btn btn-primary">
                 <span class="yarn-icon yarn-icon--apparel"></span>
               </button>
+              <button class="btn btn-primary disabled">
+                <span class="yarn-icon yarn-icon--apparel"></span>
+              </button>
             </div>
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-12 col-sm-6">
               <p>{{ $t('views.components-buttons.sections.icons.primary-text-icon') }}</p>
+              <button class="btn btn-primary active">
+                <span class="yarn-icon yarn-icon--products"></span>
+                <span>{{ $t('meta.brand') }}</span>
+              </button>
               <button class="btn btn-primary">
                 <span class="yarn-icon yarn-icon--products"></span>
                 <span>{{ $t('meta.brand') }}</span>
               </button>
+              <button class="btn btn-primary disabled">
+                <span class="yarn-icon yarn-icon--products"></span>
+                <span>{{ $t('meta.brand') }}</span>
+              </button>
             </div>
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-12 col-sm-6">
               <p>{{ $t('views.components-buttons.sections.icons.link') }}</p>
+              <button class="btn btn-link active">
+                <span class="yarn-icon yarn-icon--mirror-model"></span>
+              </button>
               <button class="btn btn-link">
                 <span class="yarn-icon yarn-icon--mirror-model"></span>
               </button>
+              <button class="btn btn-link disabled">
+                <span class="yarn-icon yarn-icon--mirror-model"></span>
+              </button>
             </div>
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-12 col-sm-6">
               <p>{{ $t('views.components-buttons.sections.icons.secondary') }}</p>
+              <button class="btn btn-secondary active">
+                <span class="yarn-icon yarn-icon--edit"></span>
+              </button>
               <button class="btn btn-secondary">
+                <span class="yarn-icon yarn-icon--edit"></span>
+              </button>
+              <button class="btn btn-secondary disabled">
                 <span class="yarn-icon yarn-icon--edit"></span>
               </button>
             </div>
