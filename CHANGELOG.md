@@ -1,3 +1,11 @@
+## 1.5.5
+
+- Fixed button style on focus state.
+
+### [ buttons ]
+
+- Added `.focus` class and `:focus` pseudo-class to button generator with default button values.
+
 ## 1.5.4
 
 - Fixed breadcrumb margin between items.
