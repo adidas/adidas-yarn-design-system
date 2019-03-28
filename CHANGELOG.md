@@ -1,3 +1,24 @@
+## 1.5.4
+
+- Fixed breadcrumb margin between items.
+- Fixed buttons style.
+
+### [ breadcrumbs ]
+
+- Removed margin left of list items.
+
+### [ buttons ]
+
+- Changed background color of active primary button to default one.
+- Fixed `btn-link` disabled style when hover.
+- Fixed `btn-tertiary` hover effect.
+- Fixed `btn-tertiary--dark` active color.
+- Renamed `btn-tertiary-dark` to `btn-tertiary--dark`.
+
+### [ example ]
+
+- Updated buttons page adding the three button states: _active_, _default_, _disabled_.
+
 ## 1.5.3
 
 - Fixed list group classes.

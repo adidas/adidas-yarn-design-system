@@ -1,11 +1,14 @@
 <template>
   <div class="button-group" :class="{ 'button-group--dark': dark }">
-    <h5 :class=" { 'color--primary-white': dark }">
+    <h6 :class=" { 'color--primary-white': dark }">
       {{ $tc('common.button') }}
       {{ $t(`common.colors.${ name }`) }}
-    </h5>
-    <button :class="`btn ${ _classes }`">
+    </h6>
+    <button :class="`btn ${ _classes } active`">
       {{ $t('common.state.active') }}
+    </button>
+    <button :class="`btn ${ _classes }`">
+      {{ $t('common.state.default') }}
     </button>
     <button :class="`btn ${ _classes } disabled`">
       {{ $t('common.state.inactive') }}
