@@ -1,0 +1,1 @@
+webpackJsonp([20],{"19cf":function(e,c,n){"use strict";c.a={fetch:function(e){(0,e.redirect)(301,"/components/form/checkbox")}}},"7umy":function(e,c,n){"use strict";Object.defineProperty(c,"__esModule",{value:!0});var t=n("19cf"),u=n("VU/8")(t.a,null,!1,null,null,null);c.default=u.exports}});
