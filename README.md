@@ -314,7 +314,7 @@ adidas AG publishes this software and accompanied documentation (if any) subject
 
 NOTICE: The software has been designed solely for the purpose of giving some CSS classes to customize frontend applications with the adidas style. The software is NOT designed, tested or verified for productive use whatsoever, nor or for any use related to high risk environments, such as health care, highly or fully autonomous driving, power plants, or other critical infrastructures or services.
 
-If you want to contact adidas regarding the software, you can mail us at _opensourcesoftware@adidas.com_.
+If you want to contact adidas regarding the software, you can mail us at _software.engineering@adidas.com_.
 
 For further information open the [adidas terms and conditions][terms-and-conditions] page.
 
