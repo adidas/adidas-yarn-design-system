@@ -13,7 +13,7 @@
   ],
   "homepage": "http://adidas.github.io/adidas-yarn-design-system/",
   "devDependencies": {
-    "acorn": "6.0.7",
+    "acorn": "6.4.1",
     "ajv": "6.5.3",
     "autoprefixer": "8.6.5",
     "babel-core": "6.26.3",
